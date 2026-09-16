@@ -1,0 +1,11 @@
+
+    
+    
+    truncate table "VENDAS"."dbo"."lojas";
+    -- dbt seed --
+    
+          insert into "VENDAS"."dbo"."lojas" ("Estado", "Cidade", "Vendedores") values (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?)
+      
+
+;
+  

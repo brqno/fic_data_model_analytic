@@ -1,0 +1,237 @@
+==================== 2026-09-10T20:54:34.255975Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-09-10T20:54:34.260953Z | 60c8dd2a-4c6f-415b-9ac8-031bdebf1261 ====================
+20:54:34.261630 [info ]: Starting dbt LSP server
+20:54:34.262476 [info ]: Connecting to LSP client on port 8000
+20:54:34.265805 [info ]: Successfully connected to LSP client
+20:54:34.266490 [info ]: Creating LSP service...
+20:54:34.280172 [info ]: Creating LSP server...
+20:54:34.280232 [info ]: Starting LSP server...
+20:54:34.709535 [info ]: Loading ~/.dbt/profiles.yml
+20:54:40.136498 [info ]: Loading ~/.dbt/profiles.yml
+20:54:50.235013 [info ]: Loading ~/.dbt/profiles.yml
+20:54:50.492533 [info ]: Loading ~/.dbt/profiles.yml
+20:54:54.699386 [info ]: Loading ~/.dbt/profiles.yml
+20:55:02.257229 [info ]: Loading ~/.dbt/profiles.yml
+20:55:02.571463 [info ]: Loading ~/.dbt/profiles.yml
+20:56:34.374726 [info ]: Loading ~/.dbt/profiles.yml
+20:59:02.582198 [info ]: Loading ~/.dbt/profiles.yml
+20:59:07.129076 [info ]: Loading ~/.dbt/profiles.yml
+20:59:11.266066 [info ]: Loading ~/.dbt/profiles.yml
+20:59:17.979253 [info ]: Loading ~/.dbt/profiles.yml
+20:59:25.459222 [info ]: Loading ~/.dbt/profiles.yml
+20:59:29.454514 [info ]: Loading ~/.dbt/profiles.yml
+20:59:54.618016 [info ]: Loading ~/.dbt/profiles.yml
+20:59:54.975964 [info ]: Loading ~/.dbt/profiles.yml
+21:01:14.031603 [info ]: Loading ~/.dbt/profiles.yml
+21:02:56.910235 [info ]: Loading ~/.dbt/profiles.yml
+21:03:06.253267 [info ]: Loading ~/.dbt/profiles.yml
+21:05:08.877916 [info ]: Loading ~/.dbt/profiles.yml
+21:05:30.138471 [info ]: Loading ~/.dbt/profiles.yml
+21:06:13.629136 [info ]: Loading ~/.dbt/profiles.yml
+21:06:28.509483 [info ]: Loading ~/.dbt/profiles.yml
+21:06:32.605341 [info ]: Loading ~/.dbt/profiles.yml
+21:07:16.244476 [info ]: Loading ~/.dbt/profiles.yml
+21:08:18.600799 [info ]: Loading ~/.dbt/profiles.yml
+21:08:18.926645 [info ]: Loading ~/.dbt/profiles.yml
+21:08:31.266181 [info ]: Loading ~/.dbt/profiles.yml
+21:08:31.642117 [info ]: Loading ~/.dbt/profiles.yml
+21:09:09.869350 [info ]: Loading ~/.dbt/profiles.yml
+21:09:10.184244 [info ]: Loading ~/.dbt/profiles.yml
+21:10:26.759223 [info ]: Loading ~/.dbt/profiles.yml
+21:11:10.520680 [info ]: Loading ~/.dbt/profiles.yml
+21:11:10.845518 [info ]: Loading ~/.dbt/profiles.yml
+21:11:26.425224 [info ]: Loading ~/.dbt/profiles.yml
+21:11:26.797446 [info ]: Loading ~/.dbt/profiles.yml
+21:11:33.616359 [info ]: Loading ~/.dbt/profiles.yml
+21:11:33.923524 [info ]: Loading ~/.dbt/profiles.yml
+21:11:48.107783 [info ]: Loading ~/.dbt/profiles.yml
+21:11:48.437182 [info ]: Loading ~/.dbt/profiles.yml
+21:11:52.941102 [info ]: Loading ~/.dbt/profiles.yml
+21:12:50.662646 [info ]: Loading ~/.dbt/profiles.yml
+21:12:51.013755 [info ]: Loading ~/.dbt/profiles.yml
+21:17:01.480669 [info ]: Loading ~/.dbt/profiles.yml
+21:17:01.821796 [info ]: Loading ~/.dbt/profiles.yml
+21:21:31.623492 [info ]: Loading ~/.dbt/profiles.yml
+21:22:10.659260 [info ]: Loading ~/.dbt/profiles.yml
+21:24:16.276389 [info ]: Loading ~/.dbt/profiles.yml
+21:26:33.891552 [info ]: Loading ~/.dbt/profiles.yml
+21:26:33.947632 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-09-10T21:26:33.949424Z | 29340156-1a90-4b1e-b1de-832697210ffb ====================
+21:26:33.954831 [info ]: Started loading project
+21:26:33.970041 [info ]: Loading ~/.dbt/profiles.yml
+21:26:33.976664 [error]: [InvalidConfig (dbt1005)]: Failed to parse profiles.yml: unknown variant `sqlserver`, expected one of `redshift`, `snowflake`, `postgres`, `bigquery`, `trino`, `datafusion`, `spark`, `databricks`, `salesforce`, `duckdb`, `alt`, `exasol`, `fabric`, `clickhouse`
+21:26:33.978912 [info ]: Finished loading project [  0.02s]
+21:26:33.980874 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [31ms]
+21:26:44.652862 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-09-10T21:29:10.098156Z | b95f8f76-2d94-4386-a9a4-da9ca293877f ====================
+21:29:10.098278 [info ]: Started loading project
+21:29:10.099218 [info ]: Loading ~/.dbt/profiles.yml
+21:29:10.099681 [error]: [InvalidConfig (dbt1005)]: Failed to parse profiles.yml: unknown variant `sqlserver`, expected one of `redshift`, `snowflake`, `postgres`, `bigquery`, `trino`, `datafusion`, `spark`, `databricks`, `salesforce`, `duckdb`, `alt`, `exasol`, `fabric`, `clickhouse`
+21:29:10.099755 [info ]: Finished loading project [  0.00s]
+21:29:10.099782 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [1ms]
+21:29:24.291059 [info ]: Loading ~/.dbt/profiles.yml
+21:29:24.293355 [info ]: Loading ~/.dbt/profiles.yml
+21:29:24.300506 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-09-10T21:29:34.653811Z | 67ca9ec6-0d11-4abb-a8c1-49881ac89a25 ====================
+21:29:34.653898 [info ]: Started loading project
+21:29:34.654499 [info ]: Loading ~/.dbt/profiles.yml
+21:29:34.654772 [error]: [InvalidConfig (dbt1005)]: Failed to parse profiles.yml: unknown variant `sqlserver`, expected one of `redshift`, `snowflake`, `postgres`, `bigquery`, `trino`, `datafusion`, `spark`, `databricks`, `salesforce`, `duckdb`, `alt`, `exasol`, `fabric`, `clickhouse`
+21:29:34.654827 [info ]: Finished loading project [  0.00s]
+21:29:34.654848 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [1ms]
+21:29:36.500674 [info ]: Loading ~/.dbt/profiles.yml
+21:29:36.703972 [info ]: Loading ~/.dbt/profiles.yml
+21:29:37.075178 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-09-10T21:29:37.198611Z | c411b063-5f97-434e-a96f-e90105afab76 ====================
+21:29:37.198746 [info ]: Started loading project
+21:29:37.199436 [info ]: Loading ~/.dbt/profiles.yml
+21:29:37.199677 [error]: [InvalidConfig (dbt1005)]: Failed to parse profiles.yml: unknown variant `sqlserver`, expected one of `redshift`, `snowflake`, `postgres`, `bigquery`, `trino`, `datafusion`, `spark`, `databricks`, `salesforce`, `duckdb`, `alt`, `exasol`, `fabric`, `clickhouse`
+21:29:37.199774 [info ]: Finished loading project [  0.00s]
+21:29:37.199792 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [1ms]
+21:29:37.599308 [info ]: Loading ~/.dbt/profiles.yml
+21:29:50.731834 [info ]: Loading ~/.dbt/profiles.yml
+21:29:51.056448 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-09-10T21:30:07.693476Z | b409a3fa-081f-4d49-bc3e-f300d10056d9 ====================
+21:30:07.693560 [info ]: Started loading project
+21:30:07.694087 [info ]: Loading ~/.dbt/profiles.yml
+21:30:07.694437 [error]: [InvalidConfig (dbt1005)]: Failed to parse profiles.yml: unknown variant `sqlserver`, expected one of `redshift`, `snowflake`, `postgres`, `bigquery`, `trino`, `datafusion`, `spark`, `databricks`, `salesforce`, `duckdb`, `alt`, `exasol`, `fabric`, `clickhouse`
+21:30:07.694513 [info ]: Finished loading project [  0.00s]
+21:30:07.694539 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [1ms]
+21:31:04.307353 [info ]: Loading ~/.dbt/profiles.yml
+21:32:48.135635 [info ]: Loading ~/.dbt/profiles.yml
+21:33:25.758380 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-09-10T21:33:46.812710Z | 44db365b-9e8e-4a0d-a94b-830d2de257d9 ====================
+21:33:46.812803 [info ]: Started loading project
+21:33:46.813637 [info ]: Loading ~/.dbt/profiles.yml
+21:33:46.814158 [error]: [InvalidConfig (dbt1005)]: Failed to parse profiles.yml: unknown variant `sqlserver`, expected one of `redshift`, `snowflake`, `postgres`, `bigquery`, `trino`, `datafusion`, `spark`, `databricks`, `salesforce`, `duckdb`, `alt`, `exasol`, `fabric`, `clickhouse`
+21:33:46.814249 [info ]: Finished loading project [  0.00s]
+21:33:46.814276 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [1ms]
+==================== 2026-09-10T21:33:47.983084Z | f69b25e0-9270-4cf7-ab8f-f298df79292c ====================
+21:33:47.983164 [info ]: Started loading project
+21:33:47.983773 [info ]: Loading ~/.dbt/profiles.yml
+21:33:47.984152 [error]: [InvalidConfig (dbt1005)]: Failed to parse profiles.yml: unknown variant `sqlserver`, expected one of `redshift`, `snowflake`, `postgres`, `bigquery`, `trino`, `datafusion`, `spark`, `databricks`, `salesforce`, `duckdb`, `alt`, `exasol`, `fabric`, `clickhouse`
+21:33:47.984248 [info ]: Finished loading project [  0.00s]
+21:33:47.984279 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [1ms]
+21:33:56.519581 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-09-10T21:34:09.895694Z | ea0fd4dc-7a1a-4845-a412-f3606df0f1f1 ====================
+21:34:09.895778 [info ]: Started loading project
+21:34:09.896702 [info ]: Loading ~/.dbt/profiles.yml
+21:34:09.897480 [error]: [InvalidConfig (dbt1005)]: Failed to parse profiles.yml: unknown variant `sqlserver`, expected one of `redshift`, `snowflake`, `postgres`, `bigquery`, `trino`, `datafusion`, `spark`, `databricks`, `salesforce`, `duckdb`, `alt`, `exasol`, `fabric`, `clickhouse`
+21:34:09.897646 [info ]: Finished loading project [  0.00s]
+21:34:09.897686 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [1ms]
+==================== 2026-09-10T21:34:10.861543Z | 27009765-6a75-4431-b126-9ac5ed050a41 ====================
+21:34:10.861635 [info ]: Started loading project
+21:34:10.862648 [info ]: Loading ~/.dbt/profiles.yml
+21:34:10.863511 [error]: [InvalidConfig (dbt1005)]: Failed to parse profiles.yml: unknown variant `sqlserver`, expected one of `redshift`, `snowflake`, `postgres`, `bigquery`, `trino`, `datafusion`, `spark`, `databricks`, `salesforce`, `duckdb`, `alt`, `exasol`, `fabric`, `clickhouse`
+21:34:10.863764 [info ]: Finished loading project [  0.00s]
+21:34:10.863811 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [2ms]
+21:34:23.067638 [info ]: Loading ~/.dbt/profiles.yml
+21:34:29.261367 [info ]: Loading ~/.dbt/profiles.yml
+21:34:58.045542 [info ]: Loading ~/.dbt/profiles.yml
+21:35:05.206417 [info ]: Loading ~/.dbt/profiles.yml
+21:35:30.103580 [info ]: Loading ~/.dbt/profiles.yml
+21:36:34.734378 [info ]: Loading ~/.dbt/profiles.yml
+21:38:50.272797 [info ]: Loading ~/.dbt/profiles.yml
+21:38:50.601207 [info ]: Loading ~/.dbt/profiles.yml
+21:44:59.973911 [info ]: Loading ~/.dbt/profiles.yml
+21:50:01.335207 [info ]: Loading ~/.dbt/profiles.yml
+21:50:01.344491 [info ]: Loading ~/.dbt/profiles.yml
+21:50:02.531985 [info ]: Loading ~/.dbt/profiles.yml
+21:50:10.336813 [info ]: Loading ~/.dbt/profiles.yml
+21:51:38.112215 [info ]: Loading ~/.dbt/profiles.yml
+21:51:43.371828 [info ]: Loading ~/.dbt/profiles.yml
+21:51:43.705168 [info ]: Loading ~/.dbt/profiles.yml
+21:52:01.029513 [info ]: Loading ~/.dbt/profiles.yml
+21:52:05.743017 [info ]: Loading ~/.dbt/profiles.yml
+21:52:06.086863 [info ]: Loading ~/.dbt/profiles.yml
+21:52:25.316058 [info ]: Loading ~/.dbt/profiles.yml
+21:52:29.055116 [info ]: Loading ~/.dbt/profiles.yml
+21:52:29.400792 [info ]: Loading ~/.dbt/profiles.yml
+21:52:48.732864 [info ]: Loading ~/.dbt/profiles.yml
+21:52:49.092518 [info ]: Loading ~/.dbt/profiles.yml
+21:53:34.528944 [info ]: Loading ~/.dbt/profiles.yml
+21:53:34.531525 [info ]: Loading ~/.dbt/profiles.yml
+21:53:34.533418 [info ]: Loading ~/.dbt/profiles.yml
+21:53:34.535987 [info ]: Loading ~/.dbt/profiles.yml
+21:53:34.538048 [info ]: Loading ~/.dbt/profiles.yml
+21:53:40.684872 [info ]: Loading ~/.dbt/profiles.yml
+21:55:07.995100 [info ]: Loading ~/.dbt/profiles.yml
+21:55:08.109670 [info ]: Loading ~/.dbt/profiles.yml
+21:55:08.475303 [info ]: Loading ~/.dbt/profiles.yml
+21:55:10.230622 [info ]: Loading ~/.dbt/profiles.yml
+21:55:17.025347 [info ]: Loading ~/.dbt/profiles.yml
+21:55:17.239652 [info ]: Loading ~/.dbt/profiles.yml
+21:55:17.241574 [info ]: Loading ~/.dbt/profiles.yml
+21:55:17.243784 [info ]: Loading ~/.dbt/profiles.yml
+21:55:17.246755 [info ]: Loading ~/.dbt/profiles.yml
+21:55:17.248414 [info ]: Loading ~/.dbt/profiles.yml
+21:55:17.251302 [info ]: Loading ~/.dbt/profiles.yml
+21:55:17.252955 [info ]: Loading ~/.dbt/profiles.yml
+21:55:22.269702 [info ]: Loading ~/.dbt/profiles.yml
+21:55:22.271849 [info ]: Loading ~/.dbt/profiles.yml
+21:55:22.306856 [info ]: Loading ~/.dbt/profiles.yml
+21:55:22.308379 [info ]: Loading ~/.dbt/profiles.yml
+21:55:22.310195 [info ]: Loading ~/.dbt/profiles.yml
+21:55:22.312111 [info ]: Loading ~/.dbt/profiles.yml
+21:55:22.313571 [info ]: Loading ~/.dbt/profiles.yml
+21:55:22.315362 [info ]: Loading ~/.dbt/profiles.yml
+21:55:43.224812 [info ]: Loading ~/.dbt/profiles.yml
+21:55:43.751970 [info ]: Loading ~/.dbt/profiles.yml
+21:56:25.310340 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-09-16T11:39:26.319263Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-09-16T11:39:26.319616Z | 39371c92-3a94-45d4-9abc-3e0486d5c6bd ====================
+11:39:26.319648 [info ]: Starting dbt LSP server
+11:39:26.319675 [info ]: Connecting to LSP client on port 8000
+11:39:26.321606 [info ]: Successfully connected to LSP client
+11:39:26.321678 [info ]: Creating LSP service...
+11:39:26.339175 [info ]: Creating LSP server...
+11:39:26.339249 [info ]: Starting LSP server...
+11:39:28.134497 [info ]: Loading ~/.dbt/profiles.yml
+11:39:28.147126 [info ]: Loading ~/.dbt/profiles.yml
+11:39:28.149002 [info ]: Loading ~/.dbt/profiles.yml
+11:39:28.151718 [info ]: Loading ~/.dbt/profiles.yml
+11:39:28.153881 [info ]: Loading ~/.dbt/profiles.yml
+11:39:28.156770 [info ]: Loading ~/.dbt/profiles.yml
+11:39:29.447318 [info ]: Loading ~/.dbt/profiles.yml
+11:39:31.066389 [info ]: Loading ~/.dbt/profiles.yml
+11:42:35.725858 [info ]: Loading ~/.dbt/profiles.yml
+11:42:35.728437 [info ]: Loading ~/.dbt/profiles.yml
+11:42:42.145936 [info ]: Loading ~/.dbt/profiles.yml
+11:42:42.148582 [info ]: Loading ~/.dbt/profiles.yml
+11:42:42.160905 [info ]: Loading ~/.dbt/profiles.yml
+11:42:57.950852 [info ]: Loading ~/.dbt/profiles.yml
+11:42:57.953490 [info ]: Loading ~/.dbt/profiles.yml
+11:44:09.611580 [info ]: Loading ~/.dbt/profiles.yml
+11:44:09.967899 [info ]: Loading ~/.dbt/profiles.yml
+11:46:17.983422 [info ]: Loading ~/.dbt/profiles.yml
+11:46:18.574673 [info ]: Loading ~/.dbt/profiles.yml
+11:46:21.816899 [info ]: Loading ~/.dbt/profiles.yml
+11:46:30.051672 [info ]: Loading ~/.dbt/profiles.yml
+11:46:58.877203 [info ]: Loading ~/.dbt/profiles.yml
+11:47:12.684867 [info ]: Loading ~/.dbt/profiles.yml
+11:47:21.211905 [info ]: Loading ~/.dbt/profiles.yml
+11:47:50.854509 [info ]: Loading ~/.dbt/profiles.yml
+11:47:54.221770 [info ]: Loading ~/.dbt/profiles.yml
+11:48:51.127048 [info ]: Loading ~/.dbt/profiles.yml
+11:50:05.629593 [info ]: Loading ~/.dbt/profiles.yml
+11:50:06.231343 [info ]: Loading ~/.dbt/profiles.yml
+11:50:07.131206 [info ]: Loading ~/.dbt/profiles.yml
+11:53:33.853147 [info ]: Loading ~/.dbt/profiles.yml
+12:01:19.842185 [info ]: Loading ~/.dbt/profiles.yml
