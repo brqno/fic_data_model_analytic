@@ -1,6 +1,7 @@
 from extract.fic_data import extract_fic_data
 from load.to_sql import load_to_sql
 
+# main utilizado como teste
 
 def main() -> None:
     print("Iniciando extração dos dados...")
