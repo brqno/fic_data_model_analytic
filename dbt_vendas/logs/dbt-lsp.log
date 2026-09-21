@@ -374,3 +374,32 @@ Finished 'compile' with 1 error [1ms]
 23:18:07.203447 [info ]: Loading profiles.yml
 23:18:13.876445 [info ]: Loading profiles.yml
 23:18:20.572066 [info ]: Loading profiles.yml
+23:20:50.152991 [info ]: Loading profiles.yml
+23:20:53.485030 [info ]: Loading profiles.yml
+23:21:08.905804 [info ]: Loading profiles.yml
+23:21:13.867476 [info ]: Loading profiles.yml
+23:21:57.733856 [info ]: Loading profiles.yml
+23:21:58.020351 [info ]: Loading profiles.yml
+23:22:01.770660 [info ]: Loading profiles.yml
+23:24:32.363002 [info ]: Loading profiles.yml
+23:25:28.055633 [info ]: Loading profiles.yml
+23:25:32.753669 [info ]: Loading profiles.yml
+23:25:59.783489 [info ]: Loading profiles.yml
+23:26:01.091218 [info ]: Loading profiles.yml
+23:26:01.776730 [info ]: Loading profiles.yml
+==================== 2026-09-21T23:26:43.192319Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-09-21T23:26:43.199668Z | 3b23d468-4710-485d-aab4-efc9563978b4 ====================
+23:26:43.201789 [info ]: Starting dbt LSP server
+23:26:43.202988 [info ]: Connecting to LSP client on port 8000
+23:26:43.213609 [info ]: Successfully connected to LSP client
+23:26:43.215468 [info ]: Creating LSP service...
+23:26:43.241001 [info ]: Creating LSP server...
+23:26:43.241083 [info ]: Starting LSP server...
+23:26:43.436274 [info ]: Loading profiles.yml
+23:27:37.396301 [info ]: Loading profiles.yml
+23:27:44.453393 [info ]: Loading profiles.yml
+23:27:51.732017 [info ]: Loading profiles.yml
+23:27:59.899473 [info ]: Loading profiles.yml
+23:28:37.187839 [info ]: Loading profiles.yml
+23:28:44.648807 [info ]: Loading profiles.yml
+23:28:45.052409 [info ]: Loading profiles.yml
