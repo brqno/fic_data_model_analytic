@@ -3036,3 +3036,374 @@ GROUP BY
 [0m18:55:43.288608 [debug] [MainThread]: Flushing usage events
 [0m18:55:44.218019 [debug] [MainThread]: An error was encountered while trying to flush usage events
 ==================== 2026-09-16T11:39:30.676233Z | 01a0aa03-cbf2-76a3-a9a4-c0cd6d1e1e83 ====================
+==================== 2026-09-18T18:59:06.326000Z | 01a0b5e2-f9cb-7412-be78-a7b579b2020a ====================
+[0m19:39:01.795084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3197DC1A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E316FF4E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E31BF6B9D0>]}
+
+
+============================== 19:39:01.810427 | 8b7e2754-b5d0-4d21-9a10-8ef6bcb0b8df ==============================
+[0m19:39:01.810427 [info ] [MainThread]: Running with dbt=1.12.3
+[0m19:39:01.811434 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt parse --project-dir dbt_vendas', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'dbt_vendas\\logs'}
+[0m19:39:05.458759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8b7e2754-b5d0-4d21-9a10-8ef6bcb0b8df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E31C0263F0>]}
+[0m19:39:05.532798 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8b7e2754-b5d0-4d21-9a10-8ef6bcb0b8df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3177CF790>]}
+[0m19:39:05.533779 [info ] [MainThread]: Registered adapter: sqlserver=1.11.1
+[0m19:39:05.983998 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m19:39:05.984627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '8b7e2754-b5d0-4d21-9a10-8ef6bcb0b8df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E31C382750>]}
+[0m19:39:05.985136 [warn ] [MainThread]: [[33mWARNING[0m]: When True, dbt transaction hooks (begin/commit) emit real T-SQL BEGIN TRANSACTION / COMMIT TRANSACTION statements. When False (default and legacy), begin/commit are no-ops and each statement is auto-committed by the driver. This means earlier successful statements are not rolled back if a later statement fails. This behavior is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_dbt_transactions` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m19:39:05.986008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '8b7e2754-b5d0-4d21-9a10-8ef6bcb0b8df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E31C63FB60>]}
+[0m19:39:06.017975 [debug] [MainThread]: checksum: 322f88ac24e63d47c1d31b5534f5eab777388b114faa788d6e85c1bcb9efb5d4, vars: {}, profile: dbt_vendas, target: dev, version: 1.12.3
+[0m19:39:07.764364 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:39:07.764767 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m19:39:07.765007 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:39:07.777098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8b7e2754-b5d0-4d21-9a10-8ef6bcb0b8df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E31CB4E0B0>]}
+[0m19:39:07.781418 [info ] [MainThread]: Performance info: dbt_vendas\target\perf_info.json
+[0m19:39:07.927240 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_vendas\target\manifest.json
+[0m19:39:07.946858 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_vendas\target\semantic_manifest.json
+[0m19:39:08.016834 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_vendas\target\osi_document.json
+[0m19:39:08.017845 [debug] [MainThread]: Command `dbt parse` succeeded at 19:39:08.017720 after 6.40 seconds
+[0m19:39:08.018276 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E31BDDD710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E31CBAE150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E31CBAE750>]}
+[0m19:39:08.018729 [debug] [MainThread]: Flushing usage events
+[0m19:39:08.973794 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:40:09.076777 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000293AC12C1A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000293A993CF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000293AE8BB9D0>]}
+
+
+============================== 19:40:09.087043 | ea0d95c3-cc60-4e21-9971-59f6c56b6d33 ==============================
+[0m19:40:09.087043 [info ] [MainThread]: Running with dbt=1.12.3
+[0m19:40:09.088150 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt debug --project-dir C:\\Users\\User\\Documents\\GitHub\\fic_data_model_analytic\\dbt_vendas', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\User\\Documents\\GitHub\\fic_data_model_analytic\\dbt_vendas\\logs'}
+[0m19:40:09.482685 [info ] [MainThread]: dbt version: 1.12.3
+[0m19:40:09.483173 [info ] [MainThread]: python version: 3.14.2
+[0m19:40:09.483486 [info ] [MainThread]: python path: C:\Users\User\AppData\Local\Programs\Python\Python314\python.exe
+[0m19:40:09.483802 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m19:40:09.917740 [info ] [MainThread]: Using profiles dir at C:\Users\User\.dbt
+[0m19:40:09.918783 [info ] [MainThread]: Using profiles.yml file at C:\Users\User\.dbt\profiles.yml
+[0m19:40:09.919799 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\User\Documents\GitHub\fic_data_model_analytic\dbt_vendas\dbt_project.yml
+[0m19:40:09.920390 [info ] [MainThread]: adapter type: sqlserver
+[0m19:40:09.920876 [info ] [MainThread]: adapter version: 1.11.1
+[0m19:40:10.141915 [info ] [MainThread]: Configuration:
+[0m19:40:10.142822 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:40:10.143245 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:40:10.143643 [info ] [MainThread]: Required dependencies:
+[0m19:40:10.144015 [debug] [MainThread]: Executing "git --help"
+[0m19:40:10.287285 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:40:10.288369 [debug] [MainThread]: STDERR: "b''"
+[0m19:40:10.289306 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:40:10.292180 [info ] [MainThread]: Connection:
+[0m19:40:10.293173 [info ] [MainThread]:   driver: ODBC Driver 18 for SQL Server
+[0m19:40:10.293923 [info ] [MainThread]:   server: DESKTOP-DUBDQD2
+[0m19:40:10.294621 [info ] [MainThread]:   port: 1433
+[0m19:40:10.295445 [info ] [MainThread]:   database: VENDAS
+[0m19:40:10.296126 [info ] [MainThread]:   schema: dbo
+[0m19:40:10.296636 [info ] [MainThread]:   UID: None
+[0m19:40:10.297280 [info ] [MainThread]:   authentication: sql
+[0m19:40:10.298725 [info ] [MainThread]:   windows_login: True
+[0m19:40:10.299642 [info ] [MainThread]:   retries: 3
+[0m19:40:10.300240 [info ] [MainThread]:   login_timeout: 0
+[0m19:40:10.301025 [info ] [MainThread]:   query_timeout: 0
+[0m19:40:10.301630 [info ] [MainThread]:   trace_flag: False
+[0m19:40:10.302492 [info ] [MainThread]:   encrypt: False
+[0m19:40:10.303268 [info ] [MainThread]:   trust_cert: True
+[0m19:40:10.303956 [info ] [MainThread]:   backend: pyodbc
+[0m19:40:10.304701 [info ] [MainThread]:   xact_abort: True
+[0m19:40:10.306250 [info ] [MainThread]: Registered adapter: sqlserver=1.11.1
+[0m19:40:10.789520 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m19:40:10.790623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'ea0d95c3-cc60-4e21-9971-59f6c56b6d33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000293AEE31480>]}
+[0m19:40:10.791525 [warn ] [MainThread]: [[33mWARNING[0m]: When True, dbt transaction hooks (begin/commit) emit real T-SQL BEGIN TRANSACTION / COMMIT TRANSACTION statements. When False (default and legacy), begin/commit are no-ops and each statement is auto-committed by the driver. This means earlier successful statements are not rolled back if a later statement fails. This behavior is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_dbt_transactions` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m19:40:10.792837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'ea0d95c3-cc60-4e21-9971-59f6c56b6d33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000293AEF75D00>]}
+[0m19:40:10.793767 [debug] [MainThread]: Acquiring new sqlserver connection 'debug'
+[0m19:40:10.794164 [debug] [MainThread]: Using sqlserver connection "debug"
+[0m19:40:10.794470 [debug] [MainThread]: On debug: select 1 as id
+[0m19:40:10.794748 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:40:10.972689 [debug] [MainThread]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=DESKTOP-DUBDQD2,1433;Database=VENDAS;Trusted_Connection=yes;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m19:40:11.276727 [debug] [MainThread]: sqlserver adapter: Connected to db: VENDAS
+[0m19:40:11.283483 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:40:11.285987 [debug] [MainThread]: On debug: Close
+[0m19:40:11.286639 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:40:11.287232 [info ] [MainThread]: [32mAll checks passed![0m
+[0m19:40:11.288502 [debug] [MainThread]: Command `dbt debug` succeeded at 19:40:11.288374 after 2.56 seconds
+[0m19:40:11.288807 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:40:11.289143 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000293AEE76450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000293AEE76050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000293AEFB95E0>]}
+[0m19:40:11.289566 [debug] [MainThread]: Flushing usage events
+[0m19:40:12.163621 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:06:00.824834 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cdff9e97470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cdff9e97860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cdff9445be0>]}
+
+
+============================== 23:06:00.835972 | fb94d8d8-246a-4204-8aca-cbe2822cbd06 ==============================
+[0m23:06:00.835972 [info ] [MainThread]: Running with dbt=1.12.5
+[0m23:06:00.837633 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'log_format': 'default', 'quiet': 'False', 'debug': 'False', 'log_cache_events': 'False', 'invocation_command': 'dbt debug --project-dir /opt/airflow/project/dbt_vendas --profiles-dir /opt/airflow/project/dbt_vendas', 'use_experimental_parser': 'False', 'log_path': '/opt/airflow/project/dbt_vendas/logs', 'cache_selected_only': 'False', 'partial_parse': 'True', 'fail_fast': 'False', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'introspect': 'True', 'warn_error': 'None', 'printer_width': '80', 'target_path': 'None', 'static_parser': 'True', 'indirect_selection': 'eager', 'no_print': 'None', 'hints_enabled': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'None', 'maximum_seed_size_mib': '1', 'profiles_dir': '/opt/airflow/project/dbt_vendas'}
+[0m23:06:00.859968 [info ] [MainThread]: dbt version: 1.12.5
+[0m23:06:00.860943 [info ] [MainThread]: python version: 3.12.9
+[0m23:06:00.862572 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m23:06:00.864356 [info ] [MainThread]: os info: Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m23:06:01.011090 [info ] [MainThread]: Using profiles dir at /opt/airflow/project/dbt_vendas
+[0m23:06:01.013408 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/project/dbt_vendas/profiles.yml
+[0m23:06:01.015238 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/project/dbt_vendas/dbt_project.yml
+[0m23:06:01.016250 [info ] [MainThread]: adapter type: sqlserver
+[0m23:06:01.017712 [info ] [MainThread]: adapter version: 1.11.1
+[0m23:06:01.163404 [info ] [MainThread]: Configuration:
+[0m23:06:01.164979 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:06:01.165840 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:06:01.166618 [info ] [MainThread]: Required dependencies:
+[0m23:06:01.168472 [debug] [MainThread]: Executing "git --help"
+[0m23:06:01.171334 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m23:06:01.172497 [info ] [MainThread]: Connection:
+[0m23:06:01.174540 [info ] [MainThread]:   driver: ODBC Driver 17 for SQL Server
+[0m23:06:01.176105 [info ] [MainThread]:   server: DESKTOP-DUBDQD2
+[0m23:06:01.177203 [info ] [MainThread]:   port: 1433
+[0m23:06:01.178397 [info ] [MainThread]:   database: VENDAS
+[0m23:06:01.180598 [info ] [MainThread]:   schema: dbo
+[0m23:06:01.182155 [info ] [MainThread]:   UID: 
+[0m23:06:01.183482 [info ] [MainThread]:   authentication: sql
+[0m23:06:01.185493 [info ] [MainThread]:   windows_login: False
+[0m23:06:01.187183 [info ] [MainThread]:   retries: 3
+[0m23:06:01.188473 [info ] [MainThread]:   login_timeout: 0
+[0m23:06:01.190209 [info ] [MainThread]:   query_timeout: 0
+[0m23:06:01.192042 [info ] [MainThread]:   trace_flag: False
+[0m23:06:01.193869 [info ] [MainThread]:   encrypt: False
+[0m23:06:01.195732 [info ] [MainThread]:   trust_cert: True
+[0m23:06:01.197480 [info ] [MainThread]:   backend: pyodbc
+[0m23:06:01.198880 [info ] [MainThread]:   xact_abort: True
+[0m23:06:01.200454 [info ] [MainThread]: Registered adapter: sqlserver=1.11.1
+[0m23:06:01.320267 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m23:06:01.321681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'fb94d8d8-246a-4204-8aca-cbe2822cbd06', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cdff8221820>]}
+[0m23:06:01.323234 [warn ] [MainThread]: [[33mWARNING[0m]: When True, dbt transaction hooks (begin/commit) emit real T-SQL BEGIN TRANSACTION / COMMIT TRANSACTION statements. When False (default and legacy), begin/commit are no-ops and each statement is auto-committed by the driver. This means earlier successful statements are not rolled back if a later statement fails. This behavior is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_dbt_transactions` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m23:06:01.325752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'fb94d8d8-246a-4204-8aca-cbe2822cbd06', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cdff8284770>]}
+[0m23:06:01.327100 [debug] [MainThread]: Acquiring new sqlserver connection 'debug'
+[0m23:06:01.328300 [debug] [MainThread]: Using sqlserver connection "debug"
+[0m23:06:01.330280 [debug] [MainThread]: On debug: select 1 as id
+[0m23:06:01.331429 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:06:01.333971 [debug] [MainThread]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=DESKTOP-DUBDQD2,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m23:06:01.337590 [debug] [MainThread]: sqlserver adapter: SQL execution raised FailedToConnectError: Database Error
+  ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 17 for SQL Server' : file not found (0) (SQLDriverConnect)")
+[0m23:06:01.338620 [debug] [MainThread]: sqlserver adapter: Error running SQL: select 1 as id
+[0m23:06:01.340145 [debug] [MainThread]: sqlserver adapter: Rolling back transaction.
+[0m23:06:01.341585 [debug] [MainThread]: On debug: No close available on handle
+[0m23:06:01.343153 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m23:06:01.344498 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m23:06:01.346535 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m23:06:01.348167 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 17 for SQL Server' : file not found (0) (SQLDriverConnect)")
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m23:06:01.350836 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.6629896, "process_in_blocks": "1965", "process_kernel_time": 0.646569, "process_mem_max_rss": "123104", "process_out_blocks": "0", "process_user_time": 3.947688}
+[0m23:06:01.353023 [debug] [MainThread]: Command `dbt debug` failed at 23:06:01.352674 after 0.67 seconds
+[0m23:06:01.354159 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:06:01.355020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cdff88dfcb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cdff82c5490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cdff869cda0>]}
+[0m23:06:01.356176 [debug] [MainThread]: Flushing usage events
+[0m23:06:01.965631 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:07:52.198238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75e41ea8a7b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75e41ea8bf80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75e42014d4f0>]}
+
+
+============================== 23:07:52.212038 | fbe95c20-625c-4e4d-8d96-68f2a5519eab ==============================
+[0m23:07:52.212038 [info ] [MainThread]: Running with dbt=1.12.5
+[0m23:07:52.214660 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'fail_fast': 'False', 'target_path': 'None', 'version_check': 'True', 'quiet': 'False', 'profiles_dir': '/opt/airflow/project/dbt_vendas', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'empty': 'None', 'static_parser': 'True', 'log_path': '/opt/airflow/project/dbt_vendas/logs', 'debug': 'False', 'no_print': 'None', 'write_json': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'invocation_command': 'dbt debug --project-dir /opt/airflow/project/dbt_vendas --profiles-dir /opt/airflow/project/dbt_vendas', 'hints_enabled': 'True', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'maximum_seed_size_mib': '1', 'introspect': 'True'}
+[0m23:07:52.236917 [info ] [MainThread]: dbt version: 1.12.5
+[0m23:07:52.238713 [info ] [MainThread]: python version: 3.12.9
+[0m23:07:52.240719 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m23:07:52.242265 [info ] [MainThread]: os info: Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m23:08:22.880281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x791c60b3b170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x791c626b3ce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x791c60b382f0>]}
+
+
+============================== 23:08:22.891536 | 1f266ae8-eb92-4c02-8f0e-985b60bb6808 ==============================
+[0m23:08:22.891536 [info ] [MainThread]: Running with dbt=1.12.5
+[0m23:08:22.893170 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'log_cache_events': 'False', 'target_path': 'None', 'partial_parse': 'True', 'quiet': 'False', 'introspect': 'True', 'invocation_command': 'dbt debug --project-dir /opt/airflow/project/dbt_vendas --profiles-dir /opt/airflow/project/dbt_vendas', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'use_colors': 'True', 'maximum_seed_size_mib': '1', 'profiles_dir': '/opt/airflow/project/dbt_vendas', 'write_json': 'True', 'log_format': 'default', 'no_print': 'None', 'version_check': 'True', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error': 'None', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'log_path': '/opt/airflow/project/dbt_vendas/logs', 'hints_enabled': 'True'}
+[0m23:08:22.913923 [info ] [MainThread]: dbt version: 1.12.5
+[0m23:08:22.915094 [info ] [MainThread]: python version: 3.12.9
+[0m23:08:22.917382 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m23:08:22.918957 [info ] [MainThread]: os info: Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m23:08:23.074508 [info ] [MainThread]: Using profiles dir at /opt/airflow/project/dbt_vendas
+[0m23:08:23.075754 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/project/dbt_vendas/profiles.yml
+[0m23:08:23.077997 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/project/dbt_vendas/dbt_project.yml
+[0m23:08:23.079634 [info ] [MainThread]: adapter type: sqlserver
+[0m23:08:23.080886 [info ] [MainThread]: adapter version: 1.11.1
+[0m23:08:23.259472 [info ] [MainThread]: Configuration:
+[0m23:08:23.262101 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:08:23.263847 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:08:23.265511 [info ] [MainThread]: Required dependencies:
+[0m23:08:23.269144 [debug] [MainThread]: Executing "git --help"
+[0m23:08:23.272873 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m23:08:23.274963 [info ] [MainThread]: Connection:
+[0m23:08:23.277185 [info ] [MainThread]:   driver: ODBC Driver 18 for SQL Server
+[0m23:08:23.279853 [info ] [MainThread]:   server: DESKTOP-DUBDQD2
+[0m23:08:23.282620 [info ] [MainThread]:   port: 1433
+[0m23:08:23.286160 [info ] [MainThread]:   database: VENDAS
+[0m23:08:23.289528 [info ] [MainThread]:   schema: dbo
+[0m23:08:23.291964 [info ] [MainThread]:   UID: 
+[0m23:08:23.295847 [info ] [MainThread]:   authentication: sql
+[0m23:08:23.297679 [info ] [MainThread]:   windows_login: False
+[0m23:08:23.299614 [info ] [MainThread]:   retries: 3
+[0m23:08:23.301509 [info ] [MainThread]:   login_timeout: 0
+[0m23:08:23.303171 [info ] [MainThread]:   query_timeout: 0
+[0m23:08:23.305610 [info ] [MainThread]:   trace_flag: False
+[0m23:08:23.308609 [info ] [MainThread]:   encrypt: False
+[0m23:08:23.310715 [info ] [MainThread]:   trust_cert: True
+[0m23:08:23.312849 [info ] [MainThread]:   backend: pyodbc
+[0m23:08:23.314665 [info ] [MainThread]:   xact_abort: True
+[0m23:08:23.319216 [info ] [MainThread]: Registered adapter: sqlserver=1.11.1
+[0m23:08:23.490352 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m23:08:23.492250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '1f266ae8-eb92-4c02-8f0e-985b60bb6808', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x791c60555f40>]}
+[0m23:08:23.493736 [warn ] [MainThread]: [[33mWARNING[0m]: When True, dbt transaction hooks (begin/commit) emit real T-SQL BEGIN TRANSACTION / COMMIT TRANSACTION statements. When False (default and legacy), begin/commit are no-ops and each statement is auto-committed by the driver. This means earlier successful statements are not rolled back if a later statement fails. This behavior is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_dbt_transactions` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m23:08:23.496303 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '1f266ae8-eb92-4c02-8f0e-985b60bb6808', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x791c60a605f0>]}
+[0m23:08:23.497862 [debug] [MainThread]: Acquiring new sqlserver connection 'debug'
+[0m23:08:23.499154 [debug] [MainThread]: Using sqlserver connection "debug"
+[0m23:08:23.500805 [debug] [MainThread]: On debug: select 1 as id
+[0m23:08:23.502116 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:08:23.505812 [debug] [MainThread]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=DESKTOP-DUBDQD2,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m23:08:47.614968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70201aa861e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70201a5d5160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70201a4c2c60>]}
+
+
+============================== 23:08:47.624753 | c19e32d7-9009-4ad2-bc88-fed96481051b ==============================
+[0m23:08:47.624753 [info ] [MainThread]: Running with dbt=1.12.5
+[0m23:08:47.626265 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'use_experimental_parser': 'False', 'maximum_seed_size_mib': '1', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'debug': 'False', 'target_path': 'None', 'hints_enabled': 'True', 'invocation_command': 'dbt debug --project-dir /opt/airflow/project/dbt_vendas --profiles-dir /opt/airflow/project/dbt_vendas', 'partial_parse': 'True', 'indirect_selection': 'eager', 'static_parser': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'profiles_dir': '/opt/airflow/project/dbt_vendas', 'empty': 'None', 'version_check': 'True', 'cache_selected_only': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'quiet': 'False', 'log_path': '/opt/airflow/project/dbt_vendas/logs', 'fail_fast': 'False', 'introspect': 'True'}
+[0m23:08:47.647719 [info ] [MainThread]: dbt version: 1.12.5
+[0m23:08:47.648777 [info ] [MainThread]: python version: 3.12.9
+[0m23:08:47.649884 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m23:08:47.651828 [info ] [MainThread]: os info: Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m23:08:47.791379 [info ] [MainThread]: Using profiles dir at /opt/airflow/project/dbt_vendas
+[0m23:08:47.792429 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/project/dbt_vendas/profiles.yml
+[0m23:08:47.793166 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/project/dbt_vendas/dbt_project.yml
+[0m23:08:47.793948 [info ] [MainThread]: adapter type: sqlserver
+[0m23:08:47.795740 [info ] [MainThread]: adapter version: 1.11.1
+[0m23:08:47.955851 [info ] [MainThread]: Configuration:
+[0m23:08:47.958035 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:08:47.959418 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:08:47.960475 [info ] [MainThread]: Required dependencies:
+[0m23:08:47.962495 [debug] [MainThread]: Executing "git --help"
+[0m23:08:47.965198 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m23:08:47.966359 [info ] [MainThread]: Connection:
+[0m23:08:47.968448 [info ] [MainThread]:   driver: ODBC Driver 18 for SQL Server
+[0m23:08:47.970241 [info ] [MainThread]:   server: DESKTOP-DUBDQD2
+[0m23:08:47.971453 [info ] [MainThread]:   port: 1433
+[0m23:08:47.973470 [info ] [MainThread]:   database: VENDAS
+[0m23:08:47.975417 [info ] [MainThread]:   schema: dbo
+[0m23:08:47.976650 [info ] [MainThread]:   UID: 
+[0m23:08:47.977828 [info ] [MainThread]:   authentication: sql
+[0m23:08:47.979856 [info ] [MainThread]:   windows_login: False
+[0m23:08:47.981413 [info ] [MainThread]:   retries: 3
+[0m23:08:47.982607 [info ] [MainThread]:   login_timeout: 0
+[0m23:08:47.984304 [info ] [MainThread]:   query_timeout: 0
+[0m23:08:47.986493 [info ] [MainThread]:   trace_flag: False
+[0m23:08:47.988010 [info ] [MainThread]:   encrypt: False
+[0m23:08:47.989606 [info ] [MainThread]:   trust_cert: True
+[0m23:08:47.991331 [info ] [MainThread]:   backend: pyodbc
+[0m23:08:47.992819 [info ] [MainThread]:   xact_abort: True
+[0m23:08:47.994037 [info ] [MainThread]: Registered adapter: sqlserver=1.11.1
+[0m23:08:48.128550 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m23:08:48.131183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'c19e32d7-9009-4ad2-bc88-fed96481051b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7020194a9f10>]}
+[0m23:08:48.132597 [warn ] [MainThread]: [[33mWARNING[0m]: When True, dbt transaction hooks (begin/commit) emit real T-SQL BEGIN TRANSACTION / COMMIT TRANSACTION statements. When False (default and legacy), begin/commit are no-ops and each statement is auto-committed by the driver. This means earlier successful statements are not rolled back if a later statement fails. This behavior is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_dbt_transactions` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m23:08:48.134911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'c19e32d7-9009-4ad2-bc88-fed96481051b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7020194aa360>]}
+[0m23:08:48.137162 [debug] [MainThread]: Acquiring new sqlserver connection 'debug'
+[0m23:08:48.138234 [debug] [MainThread]: Using sqlserver connection "debug"
+[0m23:08:48.139548 [debug] [MainThread]: On debug: select 1 as id
+[0m23:08:48.141326 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:08:48.144648 [debug] [MainThread]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=DESKTOP-DUBDQD2,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m23:12:52.858921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7df2eac380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7df407e630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7df4cfa630>]}
+
+
+============================== 23:12:52.876894 | c180b19d-3f82-491f-a54b-af42d6ce17a5 ==============================
+[0m23:12:52.876894 [info ] [MainThread]: Running with dbt=1.12.5
+[0m23:12:52.880289 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'empty': 'None', 'partial_parse': 'True', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'static_parser': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'printer_width': '80', 'introspect': 'True', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'invocation_command': 'dbt debug --project-dir /opt/airflow/project/dbt_vendas --profiles-dir /opt/airflow/project/dbt_vendas', 'quiet': 'False', 'warn_error': 'None', 'use_colors': 'True', 'hints_enabled': 'True', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'log_path': '/opt/airflow/project/dbt_vendas/logs', 'profiles_dir': '/opt/airflow/project/dbt_vendas', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'debug': 'False'}
+[0m23:12:52.906394 [info ] [MainThread]: dbt version: 1.12.5
+[0m23:12:52.908692 [info ] [MainThread]: python version: 3.12.9
+[0m23:12:52.910266 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m23:12:52.912317 [info ] [MainThread]: os info: Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m23:12:53.079236 [info ] [MainThread]: Using profiles dir at /opt/airflow/project/dbt_vendas
+[0m23:12:53.081399 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/project/dbt_vendas/profiles.yml
+[0m23:12:53.083131 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/project/dbt_vendas/dbt_project.yml
+[0m23:12:53.085272 [info ] [MainThread]: adapter type: sqlserver
+[0m23:12:53.087356 [info ] [MainThread]: adapter version: 1.11.1
+[0m23:12:53.301439 [info ] [MainThread]: Configuration:
+[0m23:12:53.303169 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:12:53.304634 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:12:53.307010 [info ] [MainThread]: Required dependencies:
+[0m23:12:53.308632 [debug] [MainThread]: Executing "git --help"
+[0m23:12:53.313558 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:12:53.315464 [debug] [MainThread]: STDERR: "b''"
+[0m23:12:53.316989 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:12:53.319065 [info ] [MainThread]: Connection:
+[0m23:12:53.320894 [info ] [MainThread]:   driver: ODBC Driver 18 for SQL Server
+[0m23:12:53.322881 [info ] [MainThread]:   server: host.docker.internal
+[0m23:12:53.324830 [info ] [MainThread]:   port: 1433
+[0m23:12:53.326555 [info ] [MainThread]:   database: VENDAS
+[0m23:12:53.328467 [info ] [MainThread]:   schema: dbo
+[0m23:12:53.330613 [info ] [MainThread]:   UID: 
+[0m23:12:53.332231 [info ] [MainThread]:   authentication: sql
+[0m23:12:53.334225 [info ] [MainThread]:   windows_login: False
+[0m23:12:53.336223 [info ] [MainThread]:   retries: 3
+[0m23:12:53.337880 [info ] [MainThread]:   login_timeout: 0
+[0m23:12:53.339674 [info ] [MainThread]:   query_timeout: 0
+[0m23:12:53.341716 [info ] [MainThread]:   trace_flag: False
+[0m23:12:53.343547 [info ] [MainThread]:   encrypt: False
+[0m23:12:53.346186 [info ] [MainThread]:   trust_cert: True
+[0m23:12:53.348534 [info ] [MainThread]:   backend: pyodbc
+[0m23:12:53.350878 [info ] [MainThread]:   xact_abort: True
+[0m23:12:53.353547 [info ] [MainThread]: Registered adapter: sqlserver=1.11.1
+[0m23:12:53.523211 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m23:12:53.525794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'c180b19d-3f82-491f-a54b-af42d6ce17a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7df16df590>]}
+[0m23:12:53.527424 [warn ] [MainThread]: [[33mWARNING[0m]: When True, dbt transaction hooks (begin/commit) emit real T-SQL BEGIN TRANSACTION / COMMIT TRANSACTION statements. When False (default and legacy), begin/commit are no-ops and each statement is auto-committed by the driver. This means earlier successful statements are not rolled back if a later statement fails. This behavior is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_dbt_transactions` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m23:12:53.529898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'c180b19d-3f82-491f-a54b-af42d6ce17a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7df16df3b0>]}
+[0m23:12:53.531998 [debug] [MainThread]: Acquiring new sqlserver connection 'debug'
+[0m23:12:53.533984 [debug] [MainThread]: Using sqlserver connection "debug"
+[0m23:12:53.535913 [debug] [MainThread]: On debug: select 1 as id
+[0m23:12:53.537338 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:12:53.543983 [debug] [MainThread]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m23:12:53.613994 [debug] [MainThread]: sqlserver adapter: SQL execution raised FailedToConnectError: Database Error
+  ('28000', "[28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Falha de logon do usuário ''. (18456) (SQLDriverConnect)")
+[0m23:12:53.615908 [debug] [MainThread]: sqlserver adapter: Error running SQL: select 1 as id
+[0m23:12:53.617958 [debug] [MainThread]: sqlserver adapter: Rolling back transaction.
+[0m23:12:53.619688 [debug] [MainThread]: On debug: No close available on handle
+[0m23:12:53.621020 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m23:12:53.622488 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:12:53.624595 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  ('28000', "[28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Falha de logon do usuário ''. (18456) (SQLDriverConnect)")
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m23:12:53.627816 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.9199347, "process_in_blocks": "157", "process_kernel_time": 0.549951, "process_mem_max_rss": "126792", "process_out_blocks": "2144", "process_user_time": 4.459388}
+[0m23:12:53.630348 [debug] [MainThread]: Command `dbt debug` failed at 23:12:53.629956 after 0.92 seconds
+[0m23:12:53.631888 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:12:53.633034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7df1dbb860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7df2e81a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7df1668470>]}
+[0m23:12:53.634948 [debug] [MainThread]: Flushing usage events
+[0m23:12:54.293353 [debug] [MainThread]: An error was encountered while trying to flush usage events

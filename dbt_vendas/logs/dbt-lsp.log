@@ -235,3 +235,142 @@ Finished 'compile' with 1 error [2ms]
 11:50:07.131206 [info ]: Loading ~/.dbt/profiles.yml
 11:53:33.853147 [info ]: Loading ~/.dbt/profiles.yml
 12:01:19.842185 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-09-18T18:59:44.688141Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-09-18T18:59:44.698635Z | 94e718c6-44c1-467d-b5da-c4c7f043cad2 ====================
+18:59:44.699882 [info ]: Starting dbt LSP server
+18:59:44.702970 [info ]: Connecting to LSP client on port 8000
+18:59:44.707096 [info ]: Successfully connected to LSP client
+18:59:44.708462 [info ]: Creating LSP service...
+18:59:44.724640 [info ]: Creating LSP server...
+18:59:44.724717 [info ]: Starting LSP server...
+19:00:35.830214 [info ]: Loading ~/.dbt/profiles.yml
+19:00:35.888714 [info ]: Loading ~/.dbt/profiles.yml
+19:00:39.267122 [info ]: Loading ~/.dbt/profiles.yml
+19:01:37.043338 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-09-21T22:34:39.203511Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-09-21T22:34:39.211179Z | 62b8bdb0-a679-43f2-b980-e0aadc7abfdb ====================
+22:34:39.212010 [info ]: Starting dbt LSP server
+22:34:39.214232 [info ]: Connecting to LSP client on port 8000
+22:34:39.216342 [info ]: Successfully connected to LSP client
+22:34:39.217150 [info ]: Creating LSP service...
+22:34:39.254156 [info ]: Creating LSP server...
+22:34:39.254233 [info ]: Starting LSP server...
+22:34:57.811456 [info ]: Loading ~/.dbt/profiles.yml
+22:37:34.501935 [info ]: Loading ~/.dbt/profiles.yml
+22:37:40.546855 [info ]: Loading ~/.dbt/profiles.yml
+22:37:44.728903 [info ]: Loading ~/.dbt/profiles.yml
+22:37:44.733619 [info ]: Loading ~/.dbt/profiles.yml
+22:37:44.736710 [info ]: Loading ~/.dbt/profiles.yml
+22:37:44.739397 [info ]: Loading ~/.dbt/profiles.yml
+22:37:44.741081 [info ]: Loading ~/.dbt/profiles.yml
+22:37:49.447962 [info ]: Loading ~/.dbt/profiles.yml
+22:37:49.452093 [info ]: Loading ~/.dbt/profiles.yml
+22:37:49.456406 [info ]: Loading ~/.dbt/profiles.yml
+22:37:49.458847 [info ]: Loading ~/.dbt/profiles.yml
+22:37:49.461431 [info ]: Loading ~/.dbt/profiles.yml
+22:38:38.628701 [info ]: Loading ~/.dbt/profiles.yml
+22:38:49.997190 [info ]: Loading ~/.dbt/profiles.yml
+22:41:02.454282 [info ]: Loading ~/.dbt/profiles.yml
+22:41:09.212486 [info ]: Loading ~/.dbt/profiles.yml
+22:41:09.779589 [info ]: Loading ~/.dbt/profiles.yml
+22:41:29.590418 [info ]: Loading ~/.dbt/profiles.yml
+22:41:40.334679 [info ]: Loading ~/.dbt/profiles.yml
+22:41:40.344937 [info ]: Loading ~/.dbt/profiles.yml
+22:41:40.430041 [info ]: Loading ~/.dbt/profiles.yml
+22:41:40.431974 [info ]: Loading ~/.dbt/profiles.yml
+22:41:40.433921 [info ]: Loading ~/.dbt/profiles.yml
+22:41:40.603003 [info ]: Loading ~/.dbt/profiles.yml
+22:41:43.736647 [info ]: Loading ~/.dbt/profiles.yml
+22:41:43.762954 [info ]: Loading ~/.dbt/profiles.yml
+22:41:43.764736 [info ]: Loading ~/.dbt/profiles.yml
+22:41:43.767747 [info ]: Loading ~/.dbt/profiles.yml
+22:41:43.774779 [info ]: Loading ~/.dbt/profiles.yml
+22:42:00.176479 [info ]: Loading ~/.dbt/profiles.yml
+22:42:49.531759 [info ]: Loading ~/.dbt/profiles.yml
+22:42:50.040263 [info ]: Loading ~/.dbt/profiles.yml
+22:43:34.613870 [info ]: Loading ~/.dbt/profiles.yml
+22:43:45.578537 [info ]: Loading ~/.dbt/profiles.yml
+22:43:53.478051 [info ]: Loading ~/.dbt/profiles.yml
+22:43:58.531475 [info ]: Loading ~/.dbt/profiles.yml
+22:47:22.942808 [info ]: Loading profiles.yml
+==================== 2026-09-21T22:47:23.226868Z | 864455e7-e0f2-42e6-b6cd-c324e0d401cb ====================
+22:47:23.240364 [info ]: Started loading project
+22:47:23.258215 [info ]: Loading profiles.yml
+22:47:23.296568 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'DB_SERVER' not found
+(in :1:1)
+22:47:23.300498 [info ]: Finished loading project [  0.06s]
+22:47:23.306871 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [80ms]
+==================== 2026-09-21T22:47:23.507684Z | 1cf338fc-587c-4989-811d-b5356dfdf01e ====================
+22:47:23.507870 [info ]: Started loading project
+22:47:23.508945 [info ]: Loading profiles.yml
+22:47:23.509732 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'DB_SERVER' not found
+(in :1:1)
+22:47:23.509899 [info ]: Finished loading project [  0.00s]
+22:47:23.509960 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [2ms]
+22:47:23.833914 [info ]: Loading profiles.yml
+==================== 2026-09-21T22:47:25.522323Z | 4a1562f8-b3ac-494d-aaac-ebc2ea7569f5 ====================
+22:47:25.522400 [info ]: Started loading project
+22:47:25.523241 [info ]: Loading profiles.yml
+22:47:25.523822 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'DB_SERVER' not found
+(in :1:1)
+22:47:25.524101 [info ]: Finished loading project [  0.00s]
+22:47:25.524136 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [1ms]
+22:47:25.848757 [info ]: Loading profiles.yml
+22:47:38.320112 [info ]: Loading profiles.yml
+22:47:38.924475 [info ]: Loading profiles.yml
+22:48:37.890564 [info ]: Loading profiles.yml
+22:48:38.584183 [info ]: Loading profiles.yml
+22:48:40.155596 [info ]: Loading profiles.yml
+22:51:25.216982 [info ]: Loading profiles.yml
+22:51:33.390382 [info ]: Loading profiles.yml
+22:51:34.822220 [info ]: Loading profiles.yml
+22:51:38.593507 [info ]: Loading profiles.yml
+==================== 2026-09-21T22:51:58.252507Z | 0ca8aa95-61eb-4a0b-adf0-8596ebd719f8 ====================
+22:51:58.252662 [info ]: Started loading project
+22:51:58.253900 [info ]: Loading profiles.yml
+22:51:58.254855 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'DB_SERVER' not found
+(in :1:1)
+22:51:58.254996 [info ]: Finished loading project [  0.00s]
+22:51:58.255038 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [2ms]
+22:52:14.998229 [info ]: Loading profiles.yml
+22:56:11.135455 [info ]: Loading profiles.yml
+23:03:51.628137 [info ]: Loading profiles.yml
+23:03:55.140292 [info ]: Loading profiles.yml
+23:06:01.769597 [info ]: Loading profiles.yml
+23:06:37.959939 [info ]: Loading profiles.yml
+23:06:39.308840 [info ]: Loading profiles.yml
+23:09:00.691576 [info ]: Loading profiles.yml
+23:09:05.725786 [info ]: Loading profiles.yml
+23:09:27.846406 [info ]: Loading profiles.yml
+23:09:30.634541 [info ]: Loading profiles.yml
+23:12:44.618692 [info ]: Loading profiles.yml
+23:13:26.985851 [info ]: Loading profiles.yml
+==================== 2026-09-21T23:13:34.904673Z | 0df85714-41f4-414c-a4fe-1bcb9d30f0d2 ====================
+23:13:34.904827 [info ]: Started loading project
+23:13:34.905937 [info ]: Loading profiles.yml
+23:13:34.907038 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'DB_SERVER' not found
+(in :1:1)
+23:13:34.907639 [info ]: Finished loading project [  0.00s]
+23:13:34.907683 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [3ms]
+==================== 2026-09-21T23:13:37.337749Z | deae4666-9ffb-40e2-aaed-a0b9f19cc524 ====================
+23:13:37.337933 [info ]: Started loading project
+23:13:37.338651 [info ]: Loading profiles.yml
+23:13:37.339358 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'DB_SERVER' not found
+(in :1:1)
+23:13:37.339532 [info ]: Finished loading project [  0.00s]
+23:13:37.339572 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [1ms]
+23:18:07.203447 [info ]: Loading profiles.yml
+23:18:13.876445 [info ]: Loading profiles.yml
+23:18:20.572066 [info ]: Loading profiles.yml

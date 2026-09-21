@@ -1,28 +1,18 @@
 {
     "path_count": 170,
-    "parsed_path_count": 9,
-    "static_analysis_path_count": 9,
-    "static_analysis_parsed_path_count": 9,
+    "parsed_path_count": 0,
+    "static_analysis_path_count": 0,
+    "static_analysis_parsed_path_count": 0,
     "is_partial_parse_enabled": true,
     "is_static_analysis_enabled": true,
-    "read_files_elapsed": 0.06452279999939492,
-    "load_macros_elapsed": 0.0009911999986798037,
-    "parse_project_elapsed": 0.25117949999912526,
-    "patch_sources_elapsed": 1.7300000763498247e-05,
-    "process_manifest_elapsed": 0.0014530999978887849,
-    "load_all_elapsed": 0.5445375999988755,
+    "read_files_elapsed": 1.6103877999998986,
+    "load_all_elapsed": 1.7902851999997438,
     "projects": [
         {
             "project_name": "dbt_vendas",
-            "elapsed": 0.2510337999992771,
-            "parsers": [
-                {
-                    "parser": "model",
-                    "elapsed": 0.2510117999991053,
-                    "parsed_path_count": 9
-                }
-            ],
-            "parsed_path_count": 9
+            "elapsed": 0,
+            "parsers": [],
+            "parsed_path_count": 0
         },
         {
             "project_name": "dbt_sqlserver",

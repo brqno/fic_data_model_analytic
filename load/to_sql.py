@@ -18,11 +18,24 @@ def load_to_sql(csv_path: str | Path | None = None) -> None:
     if not all([server, database, driver]):
         raise ValueError("Variáveis DB_SERVER, DB_DATABASE e DB_DRIVER não foram configuradas no arquivo .env")
 
+    user = os.getenv("DB_USER")
+    password = os.getenv("DB_PASSWORD")
+    if os.getenv("AIRFLOW_CTX_DAG_ID") and not (user and password):
+        raise ValueError(
+            "DB_USER e DB_PASSWORD são obrigatórios para executar a carga no Airflow."
+        )
+
+    authentication = (
+        f"UID={user};PWD={password};"
+        if user and password
+        else "Trusted_Connection=yes;"
+    )
+
     params = urllib.parse.quote_plus(
         f"DRIVER={driver};"
         f"SERVER={server};"
         f"DATABASE={database};"
-        "Trusted_Connection=yes;"
+        f"{authentication}"
     )
 
     engine = create_engine(f"mssql+pyodbc:///?odbc_connect={params}")

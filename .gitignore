@@ -1,0 +1,17 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+
+# dbt generated artifacts
+dbt_vendas/logs/
+dbt_vendas/target/
+dbt_vendas/dbt_packages/
+
+# Airflow runtime files
+apache-airflow/logs/
+apache-airflow/.airflowignore
