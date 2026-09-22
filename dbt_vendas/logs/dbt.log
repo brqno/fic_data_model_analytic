@@ -3407,3 +3407,1703 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m23:12:53.633034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7df1dbb860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7df2e81a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7df1668470>]}
 [0m23:12:53.634948 [debug] [MainThread]: Flushing usage events
 [0m23:12:54.293353 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:05:32.205622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d57103b0410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5712e84fe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5711a0d580>]}
+
+
+============================== 13:05:32.218776 | 6d625837-9fce-4297-9194-7a2a50503c2c ==============================
+[0m13:05:32.218776 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:05:32.221609 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'partial_parse': 'True', 'log_path': '/opt/airflow/project/dbt_vendas/logs', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'introspect': 'True', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'hints_enabled': 'True', 'version_check': 'True', 'no_print': 'None', 'log_format': 'default', 'printer_width': '80', 'static_parser': 'True', 'profiles_dir': '/opt/airflow/project/dbt_vendas', 'indirect_selection': 'eager', 'quiet': 'False', 'empty': 'False', 'warn_error': 'None', 'write_json': 'True', 'cache_selected_only': 'False', 'invocation_command': 'dbt seed --project-dir /opt/airflow/project/dbt_vendas', 'fail_fast': 'False'}
+[0m13:05:32.595254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6d625837-9fce-4297-9194-7a2a50503c2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d57102acec0>]}
+[0m13:05:32.670903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6d625837-9fce-4297-9194-7a2a50503c2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d57100e32c0>]}
+[0m13:05:32.673727 [info ] [MainThread]: Registered adapter: sqlserver=1.11.1
+[0m13:05:32.800625 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:05:32.803221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '6d625837-9fce-4297-9194-7a2a50503c2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d570fd333b0>]}
+[0m13:05:32.805098 [warn ] [MainThread]: [[33mWARNING[0m]: When True, dbt transaction hooks (begin/commit) emit real T-SQL BEGIN TRANSACTION / COMMIT TRANSACTION statements. When False (default and legacy), begin/commit are no-ops and each statement is auto-committed by the driver. This means earlier successful statements are not rolled back if a later statement fails. This behavior is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_dbt_transactions` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:05:32.808101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '6d625837-9fce-4297-9194-7a2a50503c2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d570fc09610>]}
+[0m13:05:32.831008 [debug] [MainThread]: checksum: 9fbbd3914bf59bb12a76029c4d7abf7374b98f9bee9444d0065c9615c32a2b1f, vars: {}, profile: dbt_vendas, target: dev, version: 1.12.5
+[0m13:05:33.017641 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m13:05:33.018914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6d625837-9fce-4297-9194-7a2a50503c2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5710e45550>]}
+[0m13:05:34.354793 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses dbt-core's standard schema concatenation (`target.schema` + `_` + `custom_schema_name`). When False (default), uses legacy adapter behaviour: `custom_schema_name` is used directly without prefixing `target.schema`. For a permanent solution, override the `sqlserver__generate_schema_name` macro in your project instead.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_default_schema_concat` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:05:34.356506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '6d625837-9fce-4297-9194-7a2a50503c2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d570fa45ac0>]}
+[0m13:05:34.789151 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6d625837-9fce-4297-9194-7a2a50503c2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d570d6852e0>]}
+[0m13:05:34.925557 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt_vendas/target/manifest.json
+[0m13:05:34.935814 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt_vendas/target/semantic_manifest.json
+[0m13:05:34.971841 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt_vendas/target/osi_document.json
+[0m13:05:35.009771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6d625837-9fce-4297-9194-7a2a50503c2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d570d5b2a50>]}
+[0m13:05:35.012002 [info ] [MainThread]: Found 10 models, 3 seeds, 1 source, 556 macros
+[0m13:05:35.013072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6d625837-9fce-4297-9194-7a2a50503c2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d570fde29f0>]}
+[0m13:05:35.016261 [info ] [MainThread]: 
+[0m13:05:35.017969 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:05:35.018897 [info ] [MainThread]: 
+[0m13:05:35.019950 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m13:05:35.028336 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_VENDAS'
+[0m13:05:35.057014 [debug] [ThreadPool]: dbt-sqlserver
+[0m13:05:35.061464 [debug] [ThreadPool]: Using sqlserver connection "list_VENDAS"
+[0m13:05:35.062660 [debug] [ThreadPool]: On list_VENDAS: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "connection_name": "list_VENDAS"} */
+USE [VENDAS];
+    select  name as [schema]
+    from sys.schemas with (nolock) 
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m13:05:35.063552 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:05:35.066802 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:05:35.185088 [debug] [ThreadPool]: sqlserver adapter: Connected to db: VENDAS
+[0m13:05:35.190916 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:05:35.194315 [debug] [ThreadPool]: On list_VENDAS: Close
+[0m13:05:35.197964 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_VENDAS, now list_VENDAS_dbo)
+[0m13:05:35.205621 [debug] [ThreadPool]: dbt-sqlserver
+[0m13:05:35.207295 [debug] [ThreadPool]: Using sqlserver connection "list_VENDAS_dbo"
+[0m13:05:35.208203 [debug] [ThreadPool]: On list_VENDAS_dbo: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "connection_name": "list_VENDAS_dbo"} */
+USE [VENDAS];
+    declare @schema_id int = schema_id('dbo');
+    select
+      DB_NAME() as [database],
+      t.name as [name],
+      'dbo' as [schema],
+      'table' as table_type
+    from sys.tables as t with (nolock)
+    where t.schema_id = @schema_id
+    union all
+    select
+      DB_NAME() as [database],
+      v.name as [name],
+      'dbo' as [schema],
+      'view' as table_type
+    from sys.views as v with (nolock)
+    where v.schema_id = @schema_id
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m13:05:35.208913 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:05:35.210055 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:05:35.351023 [debug] [ThreadPool]: sqlserver adapter: Connected to db: VENDAS
+[0m13:05:35.418426 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:05:35.420681 [debug] [ThreadPool]: On list_VENDAS_dbo: ROLLBACK
+[0m13:05:35.422066 [debug] [ThreadPool]: On list_VENDAS_dbo: Close
+[0m13:05:35.426422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6d625837-9fce-4297-9194-7a2a50503c2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d570fd765a0>]}
+[0m13:05:35.428442 [debug] [MainThread]: On master: COMMIT
+[0m13:05:35.435816 [debug] [Thread-1 (]: Began running node seed.dbt_vendas.lojas
+[0m13:05:35.436323 [debug] [Thread-2 (]: Began running node seed.dbt_vendas.produtos
+[0m13:05:35.436728 [debug] [Thread-3 (]: Began running node seed.dbt_vendas.seed_regioes_estados
+[0m13:05:35.437483 [info ] [Thread-1 (]: 1 of 3 START seed file dbo.lojas ............................................... [RUN]
+[0m13:05:35.439573 [info ] [Thread-2 (]: 2 of 3 START seed file dbo.produtos ............................................ [RUN]
+[0m13:05:35.440683 [info ] [Thread-3 (]: 3 of 3 START seed file dbo.seed_regioes_estados ................................ [RUN]
+[0m13:05:35.441521 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_VENDAS_dbo, now seed.dbt_vendas.lojas)
+[0m13:05:35.442330 [debug] [Thread-2 (]: Acquiring new sqlserver connection 'seed.dbt_vendas.produtos'
+[0m13:05:35.443607 [debug] [Thread-3 (]: Acquiring new sqlserver connection 'seed.dbt_vendas.seed_regioes_estados'
+[0m13:05:35.445190 [debug] [Thread-1 (]: Began compiling node seed.dbt_vendas.lojas
+[0m13:05:35.446170 [debug] [Thread-2 (]: Began compiling node seed.dbt_vendas.produtos
+[0m13:05:35.446914 [debug] [Thread-3 (]: Began compiling node seed.dbt_vendas.seed_regioes_estados
+[0m13:05:35.447778 [debug] [Thread-1 (]: Began executing node seed.dbt_vendas.lojas
+[0m13:05:35.448695 [debug] [Thread-2 (]: Began executing node seed.dbt_vendas.produtos
+[0m13:05:35.450338 [debug] [Thread-3 (]: Began executing node seed.dbt_vendas.seed_regioes_estados
+[0m13:05:35.513874 [debug] [Thread-2 (]: Using sqlserver connection "seed.dbt_vendas.produtos"
+[0m13:05:35.517455 [debug] [Thread-1 (]: Using sqlserver connection "seed.dbt_vendas.lojas"
+[0m13:05:35.518180 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.produtos"} */
+truncate table "VENDAS"."dbo"."produtos"
+[0m13:05:35.520199 [debug] [Thread-3 (]: Using sqlserver connection "seed.dbt_vendas.seed_regioes_estados"
+[0m13:05:35.521871 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.lojas"} */
+truncate table "VENDAS"."dbo"."lojas"
+[0m13:05:35.523568 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:05:35.524504 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.seed_regioes_estados"} */
+truncate table "VENDAS"."dbo"."seed_regioes_estados"
+[0m13:05:35.525228 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:05:35.526192 [debug] [Thread-2 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:05:35.527530 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:05:35.528969 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:05:35.530361 [debug] [Thread-3 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:05:35.668290 [debug] [Thread-2 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:05:35.673864 [debug] [Thread-2 (]: sqlserver adapter: Database error: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "produtos" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:05:35.674835 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:05:35.675355 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: ROLLBACK
+[0m13:05:35.677343 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: Close
+[0m13:05:35.679509 [debug] [Thread-2 (]: sqlserver adapter: SQL execution raised DbtDatabaseError: Database Error
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "produtos" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:05:35.680140 [debug] [Thread-1 (]: sqlserver adapter: Database error: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "lojas" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:05:35.680569 [debug] [Thread-2 (]: sqlserver adapter: Error running SQL: macro truncate_relation
+[0m13:05:35.681355 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: ROLLBACK
+[0m13:05:35.682518 [debug] [Thread-2 (]: sqlserver adapter: Rolling back transaction.
+[0m13:05:35.684084 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: Close
+[0m13:05:35.688141 [debug] [Thread-1 (]: sqlserver adapter: SQL execution raised DbtDatabaseError: Database Error
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "lojas" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:05:35.689360 [debug] [Thread-3 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:05:35.690195 [debug] [Thread-1 (]: sqlserver adapter: Error running SQL: macro truncate_relation
+[0m13:05:35.691772 [debug] [Thread-1 (]: sqlserver adapter: Rolling back transaction.
+[0m13:05:35.694731 [debug] [Thread-3 (]: sqlserver adapter: Database error: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "seed_regioes_estados" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:05:35.696327 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: ROLLBACK
+[0m13:05:35.697222 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: Close
+[0m13:05:35.698931 [debug] [Thread-3 (]: sqlserver adapter: SQL execution raised DbtDatabaseError: Database Error
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "seed_regioes_estados" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:05:35.700709 [debug] [Thread-3 (]: sqlserver adapter: Error running SQL: macro truncate_relation
+[0m13:05:35.701937 [debug] [Thread-3 (]: sqlserver adapter: Rolling back transaction.
+[0m13:05:35.710184 [debug] [Thread-1 (]: Database Error in seed lojas (seeds/lojas.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "lojas" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:05:35.712624 [debug] [Thread-3 (]: Database Error in seed seed_regioes_estados (seeds/seed_regioes_estados.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "seed_regioes_estados" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:05:35.716192 [debug] [Thread-2 (]: Database Error in seed produtos (seeds/produtos.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "produtos" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:05:35.718317 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6d625837-9fce-4297-9194-7a2a50503c2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d570d46c680>]}
+[0m13:05:35.718896 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6d625837-9fce-4297-9194-7a2a50503c2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d570d56a060>]}
+[0m13:05:35.719276 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6d625837-9fce-4297-9194-7a2a50503c2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d570d569520>]}
+[0m13:05:35.720271 [error] [Thread-1 (]: 1 of 3 ERROR loading seed file dbo.lojas ....................................... [[31mERROR[0m in 0.27s]
+[0m13:05:35.721518 [error] [Thread-2 (]: 2 of 3 ERROR loading seed file dbo.produtos .................................... [[31mERROR[0m in 0.28s]
+[0m13:05:35.723222 [error] [Thread-3 (]: 3 of 3 ERROR loading seed file dbo.seed_regioes_estados ........................ [[31mERROR[0m in 0.27s]
+[0m13:05:35.724333 [debug] [Thread-1 (]: Finished running node seed.dbt_vendas.lojas
+[0m13:05:35.725171 [debug] [Thread-2 (]: Finished running node seed.dbt_vendas.produtos
+[0m13:05:35.725993 [debug] [Thread-3 (]: Finished running node seed.dbt_vendas.seed_regioes_estados
+[0m13:05:35.727459 [debug] [Thread-7 (]: Marking all children of 'seed.dbt_vendas.lojas' to be skipped because of status 'error'.  Reason: Database Error in seed lojas (seeds/lojas.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "lojas" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)').
+[0m13:05:35.730270 [debug] [Thread-7 (]: Marking all children of 'seed.dbt_vendas.produtos' to be skipped because of status 'error'.  Reason: Database Error in seed produtos (seeds/produtos.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "produtos" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)').
+[0m13:05:35.731164 [debug] [Thread-7 (]: Marking all children of 'seed.dbt_vendas.seed_regioes_estados' to be skipped because of status 'error'.  Reason: Database Error in seed seed_regioes_estados (seeds/seed_regioes_estados.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "seed_regioes_estados" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)').
+[0m13:05:35.734197 [debug] [MainThread]: On master: COMMIT
+[0m13:05:35.735369 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:05:35.736034 [debug] [MainThread]: Connection 'seed.dbt_vendas.lojas' was properly closed.
+[0m13:05:35.736635 [debug] [MainThread]: Connection 'seed.dbt_vendas.produtos' was properly closed.
+[0m13:05:35.737482 [debug] [MainThread]: Connection 'seed.dbt_vendas.seed_regioes_estados' was properly closed.
+[0m13:05:35.738487 [info ] [MainThread]: 
+[0m13:05:35.739645 [info ] [MainThread]: Finished running 3 seeds in 0 hours 0 minutes and 0.72 seconds (0.72s).
+[0m13:05:35.741068 [debug] [MainThread]: Command end result
+[0m13:05:35.816026 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt_vendas/target/manifest.json
+[0m13:05:35.823626 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt_vendas/target/semantic_manifest.json
+[0m13:05:35.829849 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt_vendas/target/osi_document.json
+[0m13:05:35.841128 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/project/dbt_vendas/target/run_results.json
+[0m13:05:35.842088 [info ] [MainThread]: 
+[0m13:05:35.843338 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:05:35.845355 [info ] [MainThread]: 
+[0m13:05:35.846439 [error] [MainThread]: [[31mERROR[0m]: in seed lojas (seeds/lojas.csv)
+[0m13:05:35.847290 [error] [MainThread]:   Database Error in seed lojas (seeds/lojas.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "lojas" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:05:35.848070 [info ] [MainThread]: 
+[0m13:05:35.849426 [error] [MainThread]: [[31mERROR[0m]: in seed produtos (seeds/produtos.csv)
+[0m13:05:35.850990 [error] [MainThread]:   Database Error in seed produtos (seeds/produtos.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "produtos" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:05:35.851947 [info ] [MainThread]: 
+[0m13:05:35.852713 [error] [MainThread]: [[31mERROR[0m]: in seed seed_regioes_estados (seeds/seed_regioes_estados.csv)
+[0m13:05:35.853446 [error] [MainThread]:   Database Error in seed seed_regioes_estados (seeds/seed_regioes_estados.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "seed_regioes_estados" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:05:35.854431 [info ] [MainThread]: 
+[0m13:05:35.856066 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=3 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m13:05:35.858372 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 3.77067, "process_in_blocks": "42657", "process_kernel_time": 0.622855, "process_mem_max_rss": "145776", "process_out_blocks": "1672", "process_user_time": 5.790546}
+[0m13:05:35.859345 [debug] [MainThread]: Command `dbt seed` failed at 13:05:35.859194 after 3.77 seconds
+[0m13:05:35.860786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5711315640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d57126de9c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d57114e0c20>]}
+[0m13:05:35.862298 [debug] [MainThread]: Flushing usage events
+[0m13:05:36.648016 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:07:31.203898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664c24d490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664bebacf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664c24c380>]}
+
+
+============================== 13:07:31.215555 | 987d75d3-3602-4ee5-9420-9723b982e2a5 ==============================
+[0m13:07:31.215555 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:07:31.217483 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'hints_enabled': 'True', 'log_format': 'default', 'version_check': 'True', 'maximum_seed_size_mib': '1', 'profiles_dir': '/opt/airflow/project/dbt_vendas', 'warn_error': 'None', 'printer_width': '80', 'cache_selected_only': 'False', 'quiet': 'False', 'write_json': 'True', 'static_parser': 'True', 'log_path': '/opt/airflow/project/dbt_vendas/logs', 'use_colors': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'indirect_selection': 'eager', 'empty': 'False', 'debug': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'invocation_command': 'dbt seed --project-dir /opt/airflow/project/dbt_vendas --debug', 'target_path': 'None'}
+[0m13:07:31.465980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '987d75d3-3602-4ee5-9420-9723b982e2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664ae3d9d0>]}
+[0m13:07:31.538536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '987d75d3-3602-4ee5-9420-9723b982e2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664c24eae0>]}
+[0m13:07:31.540390 [info ] [MainThread]: Registered adapter: sqlserver=1.11.1
+[0m13:07:31.671273 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:07:31.672850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '987d75d3-3602-4ee5-9420-9723b982e2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664c0d9b50>]}
+[0m13:07:31.673849 [warn ] [MainThread]: [[33mWARNING[0m]: When True, dbt transaction hooks (begin/commit) emit real T-SQL BEGIN TRANSACTION / COMMIT TRANSACTION statements. When False (default and legacy), begin/commit are no-ops and each statement is auto-committed by the driver. This means earlier successful statements are not rolled back if a later statement fails. This behavior is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_dbt_transactions` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:07:31.675152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '987d75d3-3602-4ee5-9420-9723b982e2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664a96e7b0>]}
+[0m13:07:31.693226 [debug] [MainThread]: checksum: 9fbbd3914bf59bb12a76029c4d7abf7374b98f9bee9444d0065c9615c32a2b1f, vars: {}, profile: dbt_vendas, target: dev, version: 1.12.5
+[0m13:07:31.979168 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:07:31.980838 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:07:31.982848 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:07:31.996850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '987d75d3-3602-4ee5-9420-9723b982e2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664b063ad0>]}
+[0m13:07:32.249916 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt_vendas/target/manifest.json
+[0m13:07:32.260364 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt_vendas/target/semantic_manifest.json
+[0m13:07:32.290849 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt_vendas/target/osi_document.json
+[0m13:07:32.324350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '987d75d3-3602-4ee5-9420-9723b982e2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664a302180>]}
+[0m13:07:32.327288 [info ] [MainThread]: Found 10 models, 3 seeds, 1 source, 556 macros
+[0m13:07:32.329222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '987d75d3-3602-4ee5-9420-9723b982e2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664aaa1070>]}
+[0m13:07:32.335142 [info ] [MainThread]: 
+[0m13:07:32.337288 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:07:32.339477 [info ] [MainThread]: 
+[0m13:07:32.340800 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m13:07:32.348827 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_VENDAS'
+[0m13:07:32.380902 [debug] [ThreadPool]: dbt-sqlserver
+[0m13:07:32.386523 [debug] [ThreadPool]: Using sqlserver connection "list_VENDAS"
+[0m13:07:32.388508 [debug] [ThreadPool]: On list_VENDAS: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "connection_name": "list_VENDAS"} */
+USE [VENDAS];
+    select  name as [schema]
+    from sys.schemas with (nolock) 
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m13:07:32.389774 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:07:32.392600 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:07:32.575369 [debug] [ThreadPool]: sqlserver adapter: Connected to db: VENDAS
+[0m13:07:32.579023 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:07:32.582994 [debug] [ThreadPool]: On list_VENDAS: Close
+[0m13:07:32.590700 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_VENDAS, now list_VENDAS_dbo)
+[0m13:07:32.601196 [debug] [ThreadPool]: dbt-sqlserver
+[0m13:07:32.603297 [debug] [ThreadPool]: Using sqlserver connection "list_VENDAS_dbo"
+[0m13:07:32.605410 [debug] [ThreadPool]: On list_VENDAS_dbo: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "connection_name": "list_VENDAS_dbo"} */
+USE [VENDAS];
+    declare @schema_id int = schema_id('dbo');
+    select
+      DB_NAME() as [database],
+      t.name as [name],
+      'dbo' as [schema],
+      'table' as table_type
+    from sys.tables as t with (nolock)
+    where t.schema_id = @schema_id
+    union all
+    select
+      DB_NAME() as [database],
+      v.name as [name],
+      'dbo' as [schema],
+      'view' as table_type
+    from sys.views as v with (nolock)
+    where v.schema_id = @schema_id
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m13:07:32.606720 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:07:32.607732 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:07:32.739968 [debug] [ThreadPool]: sqlserver adapter: Connected to db: VENDAS
+[0m13:07:32.746620 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:07:32.751191 [debug] [ThreadPool]: On list_VENDAS_dbo: ROLLBACK
+[0m13:07:32.752351 [debug] [ThreadPool]: On list_VENDAS_dbo: Close
+[0m13:07:32.757687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '987d75d3-3602-4ee5-9420-9723b982e2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664a85ef30>]}
+[0m13:07:32.760184 [debug] [MainThread]: On master: COMMIT
+[0m13:07:32.767219 [debug] [Thread-1 (]: Began running node seed.dbt_vendas.lojas
+[0m13:07:32.767715 [debug] [Thread-2 (]: Began running node seed.dbt_vendas.produtos
+[0m13:07:32.768415 [debug] [Thread-3 (]: Began running node seed.dbt_vendas.seed_regioes_estados
+[0m13:07:32.769515 [info ] [Thread-1 (]: 1 of 3 START seed file dbo.lojas ............................................... [RUN]
+[0m13:07:32.771689 [info ] [Thread-2 (]: 2 of 3 START seed file dbo.produtos ............................................ [RUN]
+[0m13:07:32.773296 [info ] [Thread-3 (]: 3 of 3 START seed file dbo.seed_regioes_estados ................................ [RUN]
+[0m13:07:32.774290 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_VENDAS_dbo, now seed.dbt_vendas.lojas)
+[0m13:07:32.776348 [debug] [Thread-2 (]: Acquiring new sqlserver connection 'seed.dbt_vendas.produtos'
+[0m13:07:32.778479 [debug] [Thread-3 (]: Acquiring new sqlserver connection 'seed.dbt_vendas.seed_regioes_estados'
+[0m13:07:32.779472 [debug] [Thread-1 (]: Began compiling node seed.dbt_vendas.lojas
+[0m13:07:32.780417 [debug] [Thread-2 (]: Began compiling node seed.dbt_vendas.produtos
+[0m13:07:32.782344 [debug] [Thread-3 (]: Began compiling node seed.dbt_vendas.seed_regioes_estados
+[0m13:07:32.784413 [debug] [Thread-1 (]: Began executing node seed.dbt_vendas.lojas
+[0m13:07:32.785302 [debug] [Thread-2 (]: Began executing node seed.dbt_vendas.produtos
+[0m13:07:32.786425 [debug] [Thread-3 (]: Began executing node seed.dbt_vendas.seed_regioes_estados
+[0m13:07:32.845364 [debug] [Thread-3 (]: Using sqlserver connection "seed.dbt_vendas.seed_regioes_estados"
+[0m13:07:32.846217 [debug] [Thread-1 (]: Using sqlserver connection "seed.dbt_vendas.lojas"
+[0m13:07:32.848122 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.seed_regioes_estados"} */
+truncate table "VENDAS"."dbo"."seed_regioes_estados"
+[0m13:07:32.851267 [debug] [Thread-2 (]: Using sqlserver connection "seed.dbt_vendas.produtos"
+[0m13:07:32.851725 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.lojas"} */
+truncate table "VENDAS"."dbo"."lojas"
+[0m13:07:32.853433 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:07:32.855202 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.produtos"} */
+truncate table "VENDAS"."dbo"."produtos"
+[0m13:07:32.856578 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:07:32.857796 [debug] [Thread-3 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:07:32.859382 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:07:32.861132 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:07:32.863118 [debug] [Thread-2 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:07:32.983812 [debug] [Thread-3 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:07:32.987515 [debug] [Thread-3 (]: sqlserver adapter: Database error: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "seed_regioes_estados" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:07:32.989532 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: ROLLBACK
+[0m13:07:32.990695 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: Close
+[0m13:07:32.992579 [debug] [Thread-3 (]: sqlserver adapter: SQL execution raised DbtDatabaseError: Database Error
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "seed_regioes_estados" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:07:32.994655 [debug] [Thread-3 (]: sqlserver adapter: Error running SQL: macro truncate_relation
+[0m13:07:32.995908 [debug] [Thread-3 (]: sqlserver adapter: Rolling back transaction.
+[0m13:07:33.004250 [debug] [Thread-3 (]: Database Error in seed seed_regioes_estados (seeds/seed_regioes_estados.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "seed_regioes_estados" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:07:33.007614 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '987d75d3-3602-4ee5-9420-9723b982e2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664c26b650>]}
+[0m13:07:33.010060 [error] [Thread-3 (]: 3 of 3 ERROR loading seed file dbo.seed_regioes_estados ........................ [[31mERROR[0m in 0.23s]
+[0m13:07:33.012434 [debug] [Thread-3 (]: Finished running node seed.dbt_vendas.seed_regioes_estados
+[0m13:07:33.013747 [debug] [Thread-7 (]: Marking all children of 'seed.dbt_vendas.seed_regioes_estados' to be skipped because of status 'error'.  Reason: Database Error in seed seed_regioes_estados (seeds/seed_regioes_estados.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "seed_regioes_estados" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)').
+[0m13:07:33.024240 [debug] [Thread-2 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:07:33.027888 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:07:33.029118 [debug] [Thread-2 (]: sqlserver adapter: Database error: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "produtos" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:07:33.030271 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: ROLLBACK
+[0m13:07:33.032286 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: Close
+[0m13:07:33.033774 [debug] [Thread-1 (]: sqlserver adapter: Database error: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "lojas" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:07:33.034951 [debug] [Thread-2 (]: sqlserver adapter: SQL execution raised DbtDatabaseError: Database Error
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "produtos" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:07:33.035363 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: ROLLBACK
+[0m13:07:33.037125 [debug] [Thread-2 (]: sqlserver adapter: Error running SQL: macro truncate_relation
+[0m13:07:33.039176 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: Close
+[0m13:07:33.040473 [debug] [Thread-2 (]: sqlserver adapter: Rolling back transaction.
+[0m13:07:33.041973 [debug] [Thread-1 (]: sqlserver adapter: SQL execution raised DbtDatabaseError: Database Error
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "lojas" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:07:33.046862 [debug] [Thread-2 (]: Database Error in seed produtos (seeds/produtos.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "produtos" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:07:33.047685 [debug] [Thread-1 (]: sqlserver adapter: Error running SQL: macro truncate_relation
+[0m13:07:33.049952 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '987d75d3-3602-4ee5-9420-9723b982e2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664a30abd0>]}
+[0m13:07:33.051344 [debug] [Thread-1 (]: sqlserver adapter: Rolling back transaction.
+[0m13:07:33.052433 [error] [Thread-2 (]: 2 of 3 ERROR loading seed file dbo.produtos .................................... [[31mERROR[0m in 0.27s]
+[0m13:07:33.057637 [debug] [Thread-1 (]: Database Error in seed lojas (seeds/lojas.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "lojas" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:07:33.058777 [debug] [Thread-2 (]: Finished running node seed.dbt_vendas.produtos
+[0m13:07:33.061226 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '987d75d3-3602-4ee5-9420-9723b982e2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664a2fcf20>]}
+[0m13:07:33.062623 [debug] [Thread-7 (]: Marking all children of 'seed.dbt_vendas.produtos' to be skipped because of status 'error'.  Reason: Database Error in seed produtos (seeds/produtos.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "produtos" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)').
+[0m13:07:33.063855 [error] [Thread-1 (]: 1 of 3 ERROR loading seed file dbo.lojas ....................................... [[31mERROR[0m in 0.29s]
+[0m13:07:33.067215 [debug] [Thread-1 (]: Finished running node seed.dbt_vendas.lojas
+[0m13:07:33.068412 [debug] [Thread-7 (]: Marking all children of 'seed.dbt_vendas.lojas' to be skipped because of status 'error'.  Reason: Database Error in seed lojas (seeds/lojas.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "lojas" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)').
+[0m13:07:33.071731 [debug] [MainThread]: On master: COMMIT
+[0m13:07:33.073370 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:07:33.074269 [debug] [MainThread]: Connection 'seed.dbt_vendas.lojas' was properly closed.
+[0m13:07:33.075500 [debug] [MainThread]: Connection 'seed.dbt_vendas.produtos' was properly closed.
+[0m13:07:33.077187 [debug] [MainThread]: Connection 'seed.dbt_vendas.seed_regioes_estados' was properly closed.
+[0m13:07:33.078569 [info ] [MainThread]: 
+[0m13:07:33.079396 [info ] [MainThread]: Finished running 3 seeds in 0 hours 0 minutes and 0.74 seconds (0.74s).
+[0m13:07:33.081429 [debug] [MainThread]: Command end result
+[0m13:07:33.328022 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt_vendas/target/manifest.json
+[0m13:07:33.335511 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt_vendas/target/semantic_manifest.json
+[0m13:07:33.344412 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt_vendas/target/osi_document.json
+[0m13:07:33.358126 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/project/dbt_vendas/target/run_results.json
+[0m13:07:33.360544 [info ] [MainThread]: 
+[0m13:07:33.362250 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:07:33.363326 [info ] [MainThread]: 
+[0m13:07:33.365399 [error] [MainThread]: [[31mERROR[0m]: in seed seed_regioes_estados (seeds/seed_regioes_estados.csv)
+[0m13:07:33.367600 [error] [MainThread]:   Database Error in seed seed_regioes_estados (seeds/seed_regioes_estados.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "seed_regioes_estados" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:07:33.368781 [info ] [MainThread]: 
+[0m13:07:33.370353 [error] [MainThread]: [[31mERROR[0m]: in seed produtos (seeds/produtos.csv)
+[0m13:07:33.372532 [error] [MainThread]:   Database Error in seed produtos (seeds/produtos.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "produtos" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:07:33.373840 [info ] [MainThread]: 
+[0m13:07:33.375109 [error] [MainThread]: [[31mERROR[0m]: in seed lojas (seeds/lojas.csv)
+[0m13:07:33.376911 [error] [MainThread]:   Database Error in seed lojas (seeds/lojas.csv)
+  ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível encontrar o objeto "lojas" porque ele não existe ou você não tem permissões. (1088) (SQLExecDirectW)')
+[0m13:07:33.378745 [info ] [MainThread]: 
+[0m13:07:33.379849 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=3 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m13:07:33.382988 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 2.3085265, "process_in_blocks": "1448", "process_kernel_time": 0.490897, "process_mem_max_rss": "138684", "process_out_blocks": "0", "process_user_time": 3.758183}
+[0m13:07:33.384744 [debug] [MainThread]: Command `dbt seed` failed at 13:07:33.384481 after 2.31 seconds
+[0m13:07:33.385913 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664bdff920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664d2efce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d664d2f6e40>]}
+[0m13:07:33.388214 [debug] [MainThread]: Flushing usage events
+[0m13:07:34.089045 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:08:03.182022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2cf5d0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2cbbc5c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2cf5dbb0>]}
+
+
+============================== 13:08:03.194004 | decc0429-989b-4845-8945-5bc206d91887 ==============================
+[0m13:08:03.194004 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:08:03.196078 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'use_colors': 'True', 'log_path': '/opt/airflow/project/dbt_vendas/logs', 'warn_error': 'None', 'cache_selected_only': 'False', 'hints_enabled': 'True', 'log_cache_events': 'False', 'empty': 'False', 'version_check': 'True', 'static_parser': 'True', 'profiles_dir': '/opt/airflow/project/dbt_vendas', 'debug': 'False', 'indirect_selection': 'eager', 'invocation_command': 'dbt seed --project-dir /opt/airflow/project/dbt_vendas --full-refresh', 'introspect': 'True', 'maximum_seed_size_mib': '1', 'quiet': 'False', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'write_json': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'log_format': 'default'}
+[0m13:08:03.467292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'decc0429-989b-4845-8945-5bc206d91887', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2c802f00>]}
+[0m13:08:03.540767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'decc0429-989b-4845-8945-5bc206d91887', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2b9d5be0>]}
+[0m13:08:03.543514 [info ] [MainThread]: Registered adapter: sqlserver=1.11.1
+[0m13:08:03.663253 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:08:03.665696 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'decc0429-989b-4845-8945-5bc206d91887', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2b66b590>]}
+[0m13:08:03.667634 [warn ] [MainThread]: [[33mWARNING[0m]: When True, dbt transaction hooks (begin/commit) emit real T-SQL BEGIN TRANSACTION / COMMIT TRANSACTION statements. When False (default and legacy), begin/commit are no-ops and each statement is auto-committed by the driver. This means earlier successful statements are not rolled back if a later statement fails. This behavior is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_dbt_transactions` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:08:03.668810 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'decc0429-989b-4845-8945-5bc206d91887', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2b8cd370>]}
+[0m13:08:03.683415 [debug] [MainThread]: checksum: 9fbbd3914bf59bb12a76029c4d7abf7374b98f9bee9444d0065c9615c32a2b1f, vars: {}, profile: dbt_vendas, target: dev, version: 1.12.5
+[0m13:08:03.971869 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:08:03.973959 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:08:03.976315 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:08:04.002173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'decc0429-989b-4845-8945-5bc206d91887', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2bb1ebd0>]}
+[0m13:08:04.223775 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt_vendas/target/manifest.json
+[0m13:08:04.230354 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt_vendas/target/semantic_manifest.json
+[0m13:08:04.249273 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt_vendas/target/osi_document.json
+[0m13:08:04.279718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'decc0429-989b-4845-8945-5bc206d91887', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2b55a870>]}
+[0m13:08:04.281127 [info ] [MainThread]: Found 10 models, 3 seeds, 1 source, 556 macros
+[0m13:08:04.282914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'decc0429-989b-4845-8945-5bc206d91887', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2b538500>]}
+[0m13:08:04.286577 [info ] [MainThread]: 
+[0m13:08:04.288540 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:08:04.290219 [info ] [MainThread]: 
+[0m13:08:04.291627 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m13:08:04.301738 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_VENDAS'
+[0m13:08:04.332738 [debug] [ThreadPool]: dbt-sqlserver
+[0m13:08:04.337112 [debug] [ThreadPool]: Using sqlserver connection "list_VENDAS"
+[0m13:08:04.338706 [debug] [ThreadPool]: On list_VENDAS: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "connection_name": "list_VENDAS"} */
+USE [VENDAS];
+    select  name as [schema]
+    from sys.schemas with (nolock) 
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m13:08:04.339750 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:08:04.342111 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:08:04.523885 [debug] [ThreadPool]: sqlserver adapter: Connected to db: VENDAS
+[0m13:08:04.538504 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:08:04.541682 [debug] [ThreadPool]: On list_VENDAS: Close
+[0m13:08:04.546590 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_VENDAS, now list_VENDAS_dbo)
+[0m13:08:04.557315 [debug] [ThreadPool]: dbt-sqlserver
+[0m13:08:04.559818 [debug] [ThreadPool]: Using sqlserver connection "list_VENDAS_dbo"
+[0m13:08:04.561569 [debug] [ThreadPool]: On list_VENDAS_dbo: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "connection_name": "list_VENDAS_dbo"} */
+USE [VENDAS];
+    declare @schema_id int = schema_id('dbo');
+    select
+      DB_NAME() as [database],
+      t.name as [name],
+      'dbo' as [schema],
+      'table' as table_type
+    from sys.tables as t with (nolock)
+    where t.schema_id = @schema_id
+    union all
+    select
+      DB_NAME() as [database],
+      v.name as [name],
+      'dbo' as [schema],
+      'view' as table_type
+    from sys.views as v with (nolock)
+    where v.schema_id = @schema_id
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m13:08:04.562445 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:08:04.563274 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:08:04.707148 [debug] [ThreadPool]: sqlserver adapter: Connected to db: VENDAS
+[0m13:08:04.786927 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:08:04.790321 [debug] [ThreadPool]: On list_VENDAS_dbo: ROLLBACK
+[0m13:08:04.791285 [debug] [ThreadPool]: On list_VENDAS_dbo: Close
+[0m13:08:04.796511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'decc0429-989b-4845-8945-5bc206d91887', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2b894500>]}
+[0m13:08:04.798586 [debug] [MainThread]: On master: COMMIT
+[0m13:08:04.806192 [debug] [Thread-1 (]: Began running node seed.dbt_vendas.lojas
+[0m13:08:04.806922 [debug] [Thread-2 (]: Began running node seed.dbt_vendas.produtos
+[0m13:08:04.807466 [debug] [Thread-3 (]: Began running node seed.dbt_vendas.seed_regioes_estados
+[0m13:08:04.808157 [info ] [Thread-1 (]: 1 of 3 START seed file dbo.lojas ............................................... [RUN]
+[0m13:08:04.810321 [info ] [Thread-2 (]: 2 of 3 START seed file dbo.produtos ............................................ [RUN]
+[0m13:08:04.812180 [info ] [Thread-3 (]: 3 of 3 START seed file dbo.seed_regioes_estados ................................ [RUN]
+[0m13:08:04.813470 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_VENDAS_dbo, now seed.dbt_vendas.lojas)
+[0m13:08:04.815523 [debug] [Thread-2 (]: Acquiring new sqlserver connection 'seed.dbt_vendas.produtos'
+[0m13:08:04.817518 [debug] [Thread-3 (]: Acquiring new sqlserver connection 'seed.dbt_vendas.seed_regioes_estados'
+[0m13:08:04.818572 [debug] [Thread-1 (]: Began compiling node seed.dbt_vendas.lojas
+[0m13:08:04.819505 [debug] [Thread-2 (]: Began compiling node seed.dbt_vendas.produtos
+[0m13:08:04.821071 [debug] [Thread-3 (]: Began compiling node seed.dbt_vendas.seed_regioes_estados
+[0m13:08:04.823181 [debug] [Thread-1 (]: Began executing node seed.dbt_vendas.lojas
+[0m13:08:04.824345 [debug] [Thread-2 (]: Began executing node seed.dbt_vendas.produtos
+[0m13:08:04.825560 [debug] [Thread-3 (]: Began executing node seed.dbt_vendas.seed_regioes_estados
+[0m13:08:04.907584 [debug] [Thread-2 (]: Applying DROP to: "VENDAS"."dbo"."produtos"
+[0m13:08:04.911678 [debug] [Thread-3 (]: Applying DROP to: "VENDAS"."dbo"."seed_regioes_estados"
+[0m13:08:04.905773 [debug] [Thread-1 (]: Applying DROP to: "VENDAS"."dbo"."lojas"
+[0m13:08:04.945545 [debug] [Thread-2 (]: Using sqlserver connection "seed.dbt_vendas.produtos"
+[0m13:08:04.949125 [debug] [Thread-1 (]: Using sqlserver connection "seed.dbt_vendas.lojas"
+[0m13:08:04.956330 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.produtos"} */
+
+      
+    USE [VENDAS];
+    EXEC('DROP table IF EXISTS "dbo"."produtos";');
+
+[0m13:08:04.963548 [debug] [Thread-3 (]: Using sqlserver connection "seed.dbt_vendas.seed_regioes_estados"
+[0m13:08:04.965475 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.lojas"} */
+
+      
+    USE [VENDAS];
+    EXEC('DROP table IF EXISTS "dbo"."lojas";');
+
+[0m13:08:04.966865 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:08:04.967856 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.seed_regioes_estados"} */
+
+      
+    USE [VENDAS];
+    EXEC('DROP table IF EXISTS "dbo"."seed_regioes_estados";');
+
+[0m13:08:04.968586 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:08:04.969476 [debug] [Thread-2 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:08:04.971098 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:08:04.973012 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:08:04.974648 [debug] [Thread-3 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:08:05.135147 [debug] [Thread-2 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:08:05.139052 [debug] [Thread-3 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:08:05.140727 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m13:08:05.144071 [debug] [Thread-2 (]: sqlserver adapter: Database error: ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível 'Descartar' o tabela 'produtos', pois ele não existe ou você não tem permissão. (3701) (SQLMoreResults)")
+[0m13:08:05.146124 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: Close
+[0m13:08:05.146989 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:08:05.148009 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:08:05.153940 [debug] [Thread-3 (]: sqlserver adapter: Database error: ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível 'Descartar' o tabela 'seed_regioes_estados', pois ele não existe ou você não tem permissão. (3701) (SQLMoreResults)")
+[0m13:08:05.156342 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: Close
+[0m13:08:05.159052 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:08:05.163312 [debug] [Thread-1 (]: sqlserver adapter: Database error: ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível 'Descartar' o tabela 'lojas', pois ele não existe ou você não tem permissão. (3701) (SQLMoreResults)")
+[0m13:08:05.167355 [debug] [Thread-2 (]: Database Error in seed produtos (seeds/produtos.csv)
+  ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível 'Descartar' o tabela 'produtos', pois ele não existe ou você não tem permissão. (3701) (SQLMoreResults)")
+[0m13:08:05.168293 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: Close
+[0m13:08:05.174093 [debug] [Thread-3 (]: Database Error in seed seed_regioes_estados (seeds/seed_regioes_estados.csv)
+  ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível 'Descartar' o tabela 'seed_regioes_estados', pois ele não existe ou você não tem permissão. (3701) (SQLMoreResults)")
+[0m13:08:05.174956 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'decc0429-989b-4845-8945-5bc206d91887', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2b559c70>]}
+[0m13:08:05.178168 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'decc0429-989b-4845-8945-5bc206d91887', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2b059400>]}
+[0m13:08:05.179909 [error] [Thread-2 (]: 2 of 3 ERROR loading seed file dbo.produtos .................................... [[31mERROR[0m in 0.35s]
+[0m13:08:05.183131 [debug] [Thread-1 (]: Database Error in seed lojas (seeds/lojas.csv)
+  ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível 'Descartar' o tabela 'lojas', pois ele não existe ou você não tem permissão. (3701) (SQLMoreResults)")
+[0m13:08:05.184352 [error] [Thread-3 (]: 3 of 3 ERROR loading seed file dbo.seed_regioes_estados ........................ [[31mERROR[0m in 0.36s]
+[0m13:08:05.185901 [debug] [Thread-2 (]: Finished running node seed.dbt_vendas.produtos
+[0m13:08:05.188089 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'decc0429-989b-4845-8945-5bc206d91887', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2b0590d0>]}
+[0m13:08:05.190077 [debug] [Thread-3 (]: Finished running node seed.dbt_vendas.seed_regioes_estados
+[0m13:08:05.191239 [debug] [Thread-7 (]: Marking all children of 'seed.dbt_vendas.produtos' to be skipped because of status 'error'.  Reason: Database Error in seed produtos (seeds/produtos.csv)
+  ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível 'Descartar' o tabela 'produtos', pois ele não existe ou você não tem permissão. (3701) (SQLMoreResults)").
+[0m13:08:05.193466 [error] [Thread-1 (]: 1 of 3 ERROR loading seed file dbo.lojas ....................................... [[31mERROR[0m in 0.37s]
+[0m13:08:05.197356 [debug] [Thread-7 (]: Marking all children of 'seed.dbt_vendas.seed_regioes_estados' to be skipped because of status 'error'.  Reason: Database Error in seed seed_regioes_estados (seeds/seed_regioes_estados.csv)
+  ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível 'Descartar' o tabela 'seed_regioes_estados', pois ele não existe ou você não tem permissão. (3701) (SQLMoreResults)").
+[0m13:08:05.199747 [debug] [Thread-1 (]: Finished running node seed.dbt_vendas.lojas
+[0m13:08:05.201995 [debug] [Thread-7 (]: Marking all children of 'seed.dbt_vendas.lojas' to be skipped because of status 'error'.  Reason: Database Error in seed lojas (seeds/lojas.csv)
+  ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível 'Descartar' o tabela 'lojas', pois ele não existe ou você não tem permissão. (3701) (SQLMoreResults)").
+[0m13:08:05.205955 [debug] [MainThread]: On master: COMMIT
+[0m13:08:05.207639 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:08:05.208910 [debug] [MainThread]: Connection 'seed.dbt_vendas.lojas' was properly closed.
+[0m13:08:05.210559 [debug] [MainThread]: Connection 'seed.dbt_vendas.produtos' was properly closed.
+[0m13:08:05.211913 [debug] [MainThread]: Connection 'seed.dbt_vendas.seed_regioes_estados' was properly closed.
+[0m13:08:05.212858 [info ] [MainThread]: 
+[0m13:08:05.213746 [info ] [MainThread]: Finished running 3 seeds in 0 hours 0 minutes and 0.92 seconds (0.92s).
+[0m13:08:05.216746 [debug] [MainThread]: Command end result
+[0m13:08:05.512413 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt_vendas/target/manifest.json
+[0m13:08:05.521962 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt_vendas/target/semantic_manifest.json
+[0m13:08:05.530439 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt_vendas/target/osi_document.json
+[0m13:08:05.546129 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/project/dbt_vendas/target/run_results.json
+[0m13:08:05.547406 [info ] [MainThread]: 
+[0m13:08:05.549970 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:08:05.552129 [info ] [MainThread]: 
+[0m13:08:05.554378 [error] [MainThread]: [[31mERROR[0m]: in seed produtos (seeds/produtos.csv)
+[0m13:08:05.556688 [error] [MainThread]:   Database Error in seed produtos (seeds/produtos.csv)
+  ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível 'Descartar' o tabela 'produtos', pois ele não existe ou você não tem permissão. (3701) (SQLMoreResults)")
+[0m13:08:05.558785 [info ] [MainThread]: 
+[0m13:08:05.561482 [error] [MainThread]: [[31mERROR[0m]: in seed seed_regioes_estados (seeds/seed_regioes_estados.csv)
+[0m13:08:05.563678 [error] [MainThread]:   Database Error in seed seed_regioes_estados (seeds/seed_regioes_estados.csv)
+  ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível 'Descartar' o tabela 'seed_regioes_estados', pois ele não existe ou você não tem permissão. (3701) (SQLMoreResults)")
+[0m13:08:05.566333 [info ] [MainThread]: 
+[0m13:08:05.568391 [error] [MainThread]: [[31mERROR[0m]: in seed lojas (seeds/lojas.csv)
+[0m13:08:05.570539 [error] [MainThread]:   Database Error in seed lojas (seeds/lojas.csv)
+  ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Não é possível 'Descartar' o tabela 'lojas', pois ele não existe ou você não tem permissão. (3701) (SQLMoreResults)")
+[0m13:08:05.572871 [info ] [MainThread]: 
+[0m13:08:05.574319 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=3 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m13:08:05.577829 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 2.4964135, "process_in_blocks": "1448", "process_kernel_time": 0.454596, "process_mem_max_rss": "138724", "process_out_blocks": "0", "process_user_time": 3.628725}
+[0m13:08:05.579621 [debug] [MainThread]: Command `dbt seed` failed at 13:08:05.579408 after 2.50 seconds
+[0m13:08:05.581017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2df726c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2b6ecad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x710b2b2799a0>]}
+[0m13:08:05.583101 [debug] [MainThread]: Flushing usage events
+[0m13:08:06.333032 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:08:58.179055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b66704be3f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666f839400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666e032b70>]}
+
+
+============================== 13:08:58.187881 | 9fea7c7f-959b-464c-b00e-a7ab4c999e0c ==============================
+[0m13:08:58.187881 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:08:58.188936 [debug] [MainThread]: running dbt with arguments {'hints_enabled': 'True', 'quiet': 'False', 'use_colors': 'True', 'fail_fast': 'False', 'write_json': 'True', 'printer_width': '80', 'partial_parse': 'True', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'debug': 'False', 'version_check': 'True', 'use_experimental_parser': 'False', 'profiles_dir': '/opt/airflow/project/dbt_vendas', 'maximum_seed_size_mib': '1', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/opt/airflow/project/dbt_vendas/logs', 'target_path': 'None', 'invocation_command': 'dbt seed --project-dir /opt/airflow/project/dbt_vendas --full-refresh', 'empty': 'False', 'introspect': 'True', 'no_print': 'None', 'static_parser': 'True', 'log_format': 'default', 'warn_error': 'None'}
+[0m13:08:58.449442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9fea7c7f-959b-464c-b00e-a7ab4c999e0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666d54ef30>]}
+[0m13:08:58.517300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9fea7c7f-959b-464c-b00e-a7ab4c999e0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666d403b00>]}
+[0m13:08:58.520334 [info ] [MainThread]: Registered adapter: sqlserver=1.11.1
+[0m13:08:58.622823 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:08:58.625006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '9fea7c7f-959b-464c-b00e-a7ab4c999e0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666cf4e360>]}
+[0m13:08:58.626566 [warn ] [MainThread]: [[33mWARNING[0m]: When True, dbt transaction hooks (begin/commit) emit real T-SQL BEGIN TRANSACTION / COMMIT TRANSACTION statements. When False (default and legacy), begin/commit are no-ops and each statement is auto-committed by the driver. This means earlier successful statements are not rolled back if a later statement fails. This behavior is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_dbt_transactions` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:08:58.627727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '9fea7c7f-959b-464c-b00e-a7ab4c999e0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666cf4e3f0>]}
+[0m13:08:58.648244 [debug] [MainThread]: checksum: 9fbbd3914bf59bb12a76029c4d7abf7374b98f9bee9444d0065c9615c32a2b1f, vars: {}, profile: dbt_vendas, target: dev, version: 1.12.5
+[0m13:08:58.915211 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:08:58.916257 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:08:58.916894 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:08:58.929837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9fea7c7f-959b-464c-b00e-a7ab4c999e0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666ce42a50>]}
+[0m13:08:59.133318 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt_vendas/target/manifest.json
+[0m13:08:59.141475 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt_vendas/target/semantic_manifest.json
+[0m13:08:59.165185 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt_vendas/target/osi_document.json
+[0m13:08:59.194936 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9fea7c7f-959b-464c-b00e-a7ab4c999e0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666c8ddf70>]}
+[0m13:08:59.197103 [info ] [MainThread]: Found 10 models, 3 seeds, 1 source, 556 macros
+[0m13:08:59.199254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9fea7c7f-959b-464c-b00e-a7ab4c999e0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666d149070>]}
+[0m13:08:59.203634 [info ] [MainThread]: 
+[0m13:08:59.205239 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:08:59.206549 [info ] [MainThread]: 
+[0m13:08:59.209225 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m13:08:59.218419 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_VENDAS'
+[0m13:08:59.273816 [debug] [ThreadPool]: dbt-sqlserver
+[0m13:08:59.282710 [debug] [ThreadPool]: Using sqlserver connection "list_VENDAS"
+[0m13:08:59.284692 [debug] [ThreadPool]: On list_VENDAS: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "connection_name": "list_VENDAS"} */
+USE [VENDAS];
+    select  name as [schema]
+    from sys.schemas with (nolock) 
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m13:08:59.286902 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:08:59.293000 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:08:59.536729 [debug] [ThreadPool]: sqlserver adapter: Connected to db: VENDAS
+[0m13:08:59.545839 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:08:59.549433 [debug] [ThreadPool]: On list_VENDAS: Close
+[0m13:08:59.553902 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_VENDAS, now list_VENDAS_dbo)
+[0m13:08:59.561082 [debug] [ThreadPool]: dbt-sqlserver
+[0m13:08:59.563210 [debug] [ThreadPool]: Using sqlserver connection "list_VENDAS_dbo"
+[0m13:08:59.564767 [debug] [ThreadPool]: On list_VENDAS_dbo: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "connection_name": "list_VENDAS_dbo"} */
+USE [VENDAS];
+    declare @schema_id int = schema_id('dbo');
+    select
+      DB_NAME() as [database],
+      t.name as [name],
+      'dbo' as [schema],
+      'table' as table_type
+    from sys.tables as t with (nolock)
+    where t.schema_id = @schema_id
+    union all
+    select
+      DB_NAME() as [database],
+      v.name as [name],
+      'dbo' as [schema],
+      'view' as table_type
+    from sys.views as v with (nolock)
+    where v.schema_id = @schema_id
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m13:08:59.565687 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:08:59.566455 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:08:59.683722 [debug] [ThreadPool]: sqlserver adapter: Connected to db: VENDAS
+[0m13:08:59.734217 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:08:59.737720 [debug] [ThreadPool]: On list_VENDAS_dbo: ROLLBACK
+[0m13:08:59.738680 [debug] [ThreadPool]: On list_VENDAS_dbo: Close
+[0m13:08:59.743592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9fea7c7f-959b-464c-b00e-a7ab4c999e0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666d17c530>]}
+[0m13:08:59.744654 [debug] [MainThread]: On master: COMMIT
+[0m13:08:59.751146 [debug] [Thread-1 (]: Began running node seed.dbt_vendas.lojas
+[0m13:08:59.752213 [debug] [Thread-2 (]: Began running node seed.dbt_vendas.produtos
+[0m13:08:59.753057 [debug] [Thread-3 (]: Began running node seed.dbt_vendas.seed_regioes_estados
+[0m13:08:59.753913 [info ] [Thread-1 (]: 1 of 3 START seed file dbo.lojas ............................................... [RUN]
+[0m13:08:59.755012 [info ] [Thread-2 (]: 2 of 3 START seed file dbo.produtos ............................................ [RUN]
+[0m13:08:59.755983 [info ] [Thread-3 (]: 3 of 3 START seed file dbo.seed_regioes_estados ................................ [RUN]
+[0m13:08:59.757528 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_VENDAS_dbo, now seed.dbt_vendas.lojas)
+[0m13:08:59.759533 [debug] [Thread-2 (]: Acquiring new sqlserver connection 'seed.dbt_vendas.produtos'
+[0m13:08:59.760768 [debug] [Thread-3 (]: Acquiring new sqlserver connection 'seed.dbt_vendas.seed_regioes_estados'
+[0m13:08:59.761543 [debug] [Thread-1 (]: Began compiling node seed.dbt_vendas.lojas
+[0m13:08:59.762688 [debug] [Thread-2 (]: Began compiling node seed.dbt_vendas.produtos
+[0m13:08:59.764391 [debug] [Thread-3 (]: Began compiling node seed.dbt_vendas.seed_regioes_estados
+[0m13:08:59.766265 [debug] [Thread-1 (]: Began executing node seed.dbt_vendas.lojas
+[0m13:08:59.767022 [debug] [Thread-2 (]: Began executing node seed.dbt_vendas.produtos
+[0m13:08:59.768137 [debug] [Thread-3 (]: Began executing node seed.dbt_vendas.seed_regioes_estados
+[0m13:08:59.825919 [debug] [Thread-1 (]: Applying DROP to: "VENDAS"."dbo"."lojas"
+[0m13:08:59.828756 [debug] [Thread-2 (]: Applying DROP to: "VENDAS"."dbo"."produtos"
+[0m13:08:59.849153 [debug] [Thread-3 (]: Applying DROP to: "VENDAS"."dbo"."seed_regioes_estados"
+[0m13:08:59.866662 [debug] [Thread-2 (]: Using sqlserver connection "seed.dbt_vendas.produtos"
+[0m13:08:59.869336 [debug] [Thread-1 (]: Using sqlserver connection "seed.dbt_vendas.lojas"
+[0m13:08:59.872094 [debug] [Thread-3 (]: Using sqlserver connection "seed.dbt_vendas.seed_regioes_estados"
+[0m13:08:59.873371 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.produtos"} */
+
+      
+    USE [VENDAS];
+    EXEC('DROP table IF EXISTS "dbo"."produtos";');
+
+[0m13:08:59.874963 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.lojas"} */
+
+      
+    USE [VENDAS];
+    EXEC('DROP table IF EXISTS "dbo"."lojas";');
+
+[0m13:08:59.876594 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.seed_regioes_estados"} */
+
+      
+    USE [VENDAS];
+    EXEC('DROP table IF EXISTS "dbo"."seed_regioes_estados";');
+
+[0m13:08:59.877401 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:08:59.878082 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:08:59.879052 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:08:59.880664 [debug] [Thread-2 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:08:59.882051 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:08:59.882888 [debug] [Thread-3 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:00.022065 [debug] [Thread-3 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:00.032761 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:00.040706 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:00.047859 [debug] [Thread-3 (]: Using sqlserver connection "seed.dbt_vendas.seed_regioes_estados"
+[0m13:09:00.049188 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.seed_regioes_estados"} */
+
+    create table "VENDAS"."dbo"."seed_regioes_estados" ("sigla" varchar(16),"estado" varchar(19),"regiao" varchar(16),"ordem_regiao" int)
+  
+[0m13:09:00.054544 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:00.055248 [debug] [Thread-2 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:00.055803 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:00.077570 [debug] [Thread-3 (]: Inserting batches of 400 records
+[0m13:09:00.079790 [debug] [Thread-1 (]: Using sqlserver connection "seed.dbt_vendas.lojas"
+[0m13:09:00.092134 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.lojas"} */
+
+    create table "VENDAS"."dbo"."lojas" ("Estado" varchar(16),"Cidade" varchar(16),"Vendedores" varchar(53))
+  
+[0m13:09:00.214691 [debug] [Thread-3 (]: Using sqlserver connection "seed.dbt_vendas.seed_regioes_estados"
+[0m13:09:00.215596 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:00.216139 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: 
+          insert into "VENDAS"."dbo"."seed_regioes_estados" ("sigla", "estado", "regiao", "ordem_regiao") values (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?)
+      ...
+[0m13:09:00.219346 [debug] [Thread-1 (]: Inserting batches of 400 records
+[0m13:09:00.220213 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m13:09:00.226035 [debug] [Thread-1 (]: Using sqlserver connection "seed.dbt_vendas.lojas"
+[0m13:09:00.229242 [debug] [Thread-2 (]: Using sqlserver connection "seed.dbt_vendas.produtos"
+[0m13:09:00.230179 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:00.230848 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: 
+          insert into "VENDAS"."dbo"."lojas" ("Estado", "Cidade", "Vendedores") values (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?)
+      ...
+[0m13:09:00.232183 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.produtos"} */
+
+    create table "VENDAS"."dbo"."produtos" ("ID" int,"Produto" varchar(16),"Preço" int)
+  
+[0m13:09:00.241561 [debug] [Thread-3 (]: Writing runtime SQL for node "seed.dbt_vendas.seed_regioes_estados"
+[0m13:09:00.242474 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:00.244848 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbt_vendas.lojas"
+[0m13:09:00.245683 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m13:09:00.249400 [debug] [Thread-2 (]: Inserting batches of 400 records
+[0m13:09:00.255216 [debug] [Thread-2 (]: Using sqlserver connection "seed.dbt_vendas.produtos"
+[0m13:09:00.275149 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: 
+          insert into "VENDAS"."dbo"."produtos" ("ID", "Produto", "Preço") values (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?)
+      ...
+[0m13:09:00.307229 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: COMMIT
+[0m13:09:00.310888 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: COMMIT
+[0m13:09:00.313590 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: Close
+[0m13:09:00.316283 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: Close
+[0m13:09:00.320620 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m13:09:00.322256 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9fea7c7f-959b-464c-b00e-a7ab4c999e0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666e85ebd0>]}
+[0m13:09:00.323836 [debug] [Thread-2 (]: Writing runtime SQL for node "seed.dbt_vendas.produtos"
+[0m13:09:00.324825 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9fea7c7f-959b-464c-b00e-a7ab4c999e0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666d2ba720>]}
+[0m13:09:00.326159 [info ] [Thread-3 (]: 3 of 3 OK loaded seed file dbo.seed_regioes_estados ............................ [[32mCREATE 27[0m in 0.56s]
+[0m13:09:00.328233 [info ] [Thread-1 (]: 1 of 3 OK loaded seed file dbo.lojas ........................................... [[32mCREATE 6[0m in 0.56s]
+[0m13:09:00.330310 [debug] [Thread-3 (]: Finished running node seed.dbt_vendas.seed_regioes_estados
+[0m13:09:00.332488 [debug] [Thread-1 (]: Finished running node seed.dbt_vendas.lojas
+[0m13:09:00.339043 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: COMMIT
+[0m13:09:00.342000 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: Close
+[0m13:09:00.344322 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9fea7c7f-959b-464c-b00e-a7ab4c999e0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666c96f230>]}
+[0m13:09:00.346169 [info ] [Thread-2 (]: 2 of 3 OK loaded seed file dbo.produtos ........................................ [[32mCREATE 6[0m in 0.59s]
+[0m13:09:00.348607 [debug] [Thread-2 (]: Finished running node seed.dbt_vendas.produtos
+[0m13:09:00.352283 [debug] [MainThread]: On master: COMMIT
+[0m13:09:00.354706 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:09:00.355961 [debug] [MainThread]: Connection 'seed.dbt_vendas.lojas' was properly closed.
+[0m13:09:00.357235 [debug] [MainThread]: Connection 'seed.dbt_vendas.produtos' was properly closed.
+[0m13:09:00.358947 [debug] [MainThread]: Connection 'seed.dbt_vendas.seed_regioes_estados' was properly closed.
+[0m13:09:00.360891 [info ] [MainThread]: 
+[0m13:09:00.362805 [info ] [MainThread]: Finished running 3 seeds in 0 hours 0 minutes and 1.15 seconds (1.15s).
+[0m13:09:00.366883 [debug] [MainThread]: Command end result
+[0m13:09:00.471028 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt_vendas/target/manifest.json
+[0m13:09:00.480834 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt_vendas/target/semantic_manifest.json
+[0m13:09:00.491342 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt_vendas/target/osi_document.json
+[0m13:09:00.509073 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/project/dbt_vendas/target/run_results.json
+[0m13:09:00.510385 [info ] [MainThread]: 
+[0m13:09:00.511523 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:09:00.513178 [info ] [MainThread]: 
+[0m13:09:00.515723 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m13:09:00.518858 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 2.4404397, "process_in_blocks": "1448", "process_kernel_time": 0.426715, "process_mem_max_rss": "138564", "process_out_blocks": "0", "process_user_time": 4.25508}
+[0m13:09:00.521435 [debug] [MainThread]: Command `dbt seed` succeeded at 13:09:00.520984 after 2.44 seconds
+[0m13:09:00.522834 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b66704be3f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666e8403e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b666e6535c0>]}
+[0m13:09:00.524986 [debug] [MainThread]: Flushing usage events
+[0m13:09:01.218746 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:09:31.721205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17e6fc080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17e8ba9c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17f1163c0>]}
+
+
+============================== 13:09:31.731269 | c1d1f5a0-a764-41ad-ad06-5fcfe3d7cf02 ==============================
+[0m13:09:31.731269 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:09:31.733197 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'partial_parse': 'True', 'log_path': '/opt/airflow/project/dbt_vendas/logs', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'log_format': 'default', 'maximum_seed_size_mib': '1', 'write_json': 'True', 'quiet': 'False', 'target_path': 'None', 'warn_error': 'None', 'cache_selected_only': 'False', 'hints_enabled': 'True', 'static_parser': 'True', 'empty': 'False', 'log_cache_events': 'False', 'invocation_command': 'dbt seed --project-dir /opt/airflow/project/dbt_vendas', 'indirect_selection': 'eager', 'profiles_dir': '/opt/airflow/project/dbt_vendas', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'version_check': 'True', 'introspect': 'True', 'use_colors': 'True'}
+[0m13:09:32.090959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c1d1f5a0-a764-41ad-ad06-5fcfe3d7cf02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17e215340>]}
+[0m13:09:32.186677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c1d1f5a0-a764-41ad-ad06-5fcfe3d7cf02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d18083f650>]}
+[0m13:09:32.189132 [info ] [MainThread]: Registered adapter: sqlserver=1.11.1
+[0m13:09:32.323302 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:09:32.325829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'c1d1f5a0-a764-41ad-ad06-5fcfe3d7cf02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17f84da00>]}
+[0m13:09:32.327067 [warn ] [MainThread]: [[33mWARNING[0m]: When True, dbt transaction hooks (begin/commit) emit real T-SQL BEGIN TRANSACTION / COMMIT TRANSACTION statements. When False (default and legacy), begin/commit are no-ops and each statement is auto-committed by the driver. This means earlier successful statements are not rolled back if a later statement fails. This behavior is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_dbt_transactions` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:09:32.328237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'c1d1f5a0-a764-41ad-ad06-5fcfe3d7cf02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17f84da00>]}
+[0m13:09:32.349085 [debug] [MainThread]: checksum: 9fbbd3914bf59bb12a76029c4d7abf7374b98f9bee9444d0065c9615c32a2b1f, vars: {}, profile: dbt_vendas, target: dev, version: 1.12.5
+[0m13:09:32.678905 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:09:32.680790 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:09:32.682531 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:09:32.699615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c1d1f5a0-a764-41ad-ad06-5fcfe3d7cf02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17e215580>]}
+[0m13:09:32.950175 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt_vendas/target/manifest.json
+[0m13:09:32.959528 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt_vendas/target/semantic_manifest.json
+[0m13:09:32.987681 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt_vendas/target/osi_document.json
+[0m13:09:33.026249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c1d1f5a0-a764-41ad-ad06-5fcfe3d7cf02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17dc48140>]}
+[0m13:09:33.028011 [info ] [MainThread]: Found 10 models, 3 seeds, 1 source, 556 macros
+[0m13:09:33.029479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c1d1f5a0-a764-41ad-ad06-5fcfe3d7cf02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17dc1dca0>]}
+[0m13:09:33.035069 [info ] [MainThread]: 
+[0m13:09:33.037627 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:09:33.039217 [info ] [MainThread]: 
+[0m13:09:33.041030 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m13:09:33.054152 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_VENDAS'
+[0m13:09:33.099831 [debug] [ThreadPool]: dbt-sqlserver
+[0m13:09:33.106253 [debug] [ThreadPool]: Using sqlserver connection "list_VENDAS"
+[0m13:09:33.108455 [debug] [ThreadPool]: On list_VENDAS: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "connection_name": "list_VENDAS"} */
+USE [VENDAS];
+    select  name as [schema]
+    from sys.schemas with (nolock) 
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m13:09:33.110287 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:09:33.113074 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:33.301270 [debug] [ThreadPool]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:33.317634 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:09:33.325329 [debug] [ThreadPool]: On list_VENDAS: Close
+[0m13:09:33.331883 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_VENDAS, now list_VENDAS_dbo)
+[0m13:09:33.345031 [debug] [ThreadPool]: dbt-sqlserver
+[0m13:09:33.348149 [debug] [ThreadPool]: Using sqlserver connection "list_VENDAS_dbo"
+[0m13:09:33.349584 [debug] [ThreadPool]: On list_VENDAS_dbo: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "connection_name": "list_VENDAS_dbo"} */
+USE [VENDAS];
+    declare @schema_id int = schema_id('dbo');
+    select
+      DB_NAME() as [database],
+      t.name as [name],
+      'dbo' as [schema],
+      'table' as table_type
+    from sys.tables as t with (nolock)
+    where t.schema_id = @schema_id
+    union all
+    select
+      DB_NAME() as [database],
+      v.name as [name],
+      'dbo' as [schema],
+      'view' as table_type
+    from sys.views as v with (nolock)
+    where v.schema_id = @schema_id
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m13:09:33.350448 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:09:33.351829 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:33.498814 [debug] [ThreadPool]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:33.562618 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:09:33.566214 [debug] [ThreadPool]: On list_VENDAS_dbo: ROLLBACK
+[0m13:09:33.567155 [debug] [ThreadPool]: On list_VENDAS_dbo: Close
+[0m13:09:33.573417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c1d1f5a0-a764-41ad-ad06-5fcfe3d7cf02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17e2eeba0>]}
+[0m13:09:33.575331 [debug] [MainThread]: On master: COMMIT
+[0m13:09:33.582070 [debug] [Thread-1 (]: Began running node seed.dbt_vendas.lojas
+[0m13:09:33.582661 [debug] [Thread-2 (]: Began running node seed.dbt_vendas.produtos
+[0m13:09:33.583701 [debug] [Thread-3 (]: Began running node seed.dbt_vendas.seed_regioes_estados
+[0m13:09:33.583306 [info ] [Thread-1 (]: 1 of 3 START seed file dbo.lojas ............................................... [RUN]
+[0m13:09:33.584989 [info ] [Thread-2 (]: 2 of 3 START seed file dbo.produtos ............................................ [RUN]
+[0m13:09:33.586890 [info ] [Thread-3 (]: 3 of 3 START seed file dbo.seed_regioes_estados ................................ [RUN]
+[0m13:09:33.588290 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_VENDAS_dbo, now seed.dbt_vendas.lojas)
+[0m13:09:33.589866 [debug] [Thread-2 (]: Acquiring new sqlserver connection 'seed.dbt_vendas.produtos'
+[0m13:09:33.591383 [debug] [Thread-3 (]: Acquiring new sqlserver connection 'seed.dbt_vendas.seed_regioes_estados'
+[0m13:09:33.593255 [debug] [Thread-1 (]: Began compiling node seed.dbt_vendas.lojas
+[0m13:09:33.594383 [debug] [Thread-2 (]: Began compiling node seed.dbt_vendas.produtos
+[0m13:09:33.595209 [debug] [Thread-3 (]: Began compiling node seed.dbt_vendas.seed_regioes_estados
+[0m13:09:33.597226 [debug] [Thread-1 (]: Began executing node seed.dbt_vendas.lojas
+[0m13:09:33.599027 [debug] [Thread-2 (]: Began executing node seed.dbt_vendas.produtos
+[0m13:09:33.599874 [debug] [Thread-3 (]: Began executing node seed.dbt_vendas.seed_regioes_estados
+[0m13:09:33.659986 [debug] [Thread-1 (]: Using sqlserver connection "seed.dbt_vendas.lojas"
+[0m13:09:33.662297 [debug] [Thread-3 (]: Using sqlserver connection "seed.dbt_vendas.seed_regioes_estados"
+[0m13:09:33.664810 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.lojas"} */
+truncate table "VENDAS"."dbo"."lojas"
+[0m13:09:33.667396 [debug] [Thread-2 (]: Using sqlserver connection "seed.dbt_vendas.produtos"
+[0m13:09:33.668234 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.seed_regioes_estados"} */
+truncate table "VENDAS"."dbo"."seed_regioes_estados"
+[0m13:09:33.670670 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:09:33.672088 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "seed.dbt_vendas.produtos"} */
+truncate table "VENDAS"."dbo"."produtos"
+[0m13:09:33.673000 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:09:33.674808 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:33.676867 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:09:33.678112 [debug] [Thread-3 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:33.680729 [debug] [Thread-2 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:33.833438 [debug] [Thread-2 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:33.838989 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m13:09:33.842298 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:33.854741 [debug] [Thread-3 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:33.873147 [debug] [Thread-2 (]: Inserting batches of 400 records
+[0m13:09:33.884100 [debug] [Thread-2 (]: Using sqlserver connection "seed.dbt_vendas.produtos"
+[0m13:09:33.885212 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:33.886080 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:33.886768 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: 
+          insert into "VENDAS"."dbo"."produtos" ("ID", "Produto", "Preço") values (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?)
+      ...
+[0m13:09:33.889970 [debug] [Thread-3 (]: Inserting batches of 400 records
+[0m13:09:33.893802 [debug] [Thread-1 (]: Inserting batches of 400 records
+[0m13:09:33.922849 [debug] [Thread-1 (]: Using sqlserver connection "seed.dbt_vendas.lojas"
+[0m13:09:34.140874 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m13:09:34.144764 [debug] [Thread-3 (]: Using sqlserver connection "seed.dbt_vendas.seed_regioes_estados"
+[0m13:09:34.145466 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: 
+          insert into "VENDAS"."dbo"."lojas" ("Estado", "Cidade", "Vendedores") values (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?)
+      ...
+[0m13:09:34.150351 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: 
+          insert into "VENDAS"."dbo"."seed_regioes_estados" ("sigla", "estado", "regiao", "ordem_regiao") values (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?), (?, ?, ?, ?)
+      ...
+[0m13:09:34.170593 [debug] [Thread-2 (]: Writing runtime SQL for node "seed.dbt_vendas.produtos"
+[0m13:09:34.174081 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:34.178569 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbt_vendas.lojas"
+[0m13:09:34.183480 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:34.200947 [debug] [Thread-3 (]: Writing runtime SQL for node "seed.dbt_vendas.seed_regioes_estados"
+[0m13:09:34.254332 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: COMMIT
+[0m13:09:34.256048 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: COMMIT
+[0m13:09:34.260765 [debug] [Thread-2 (]: On seed.dbt_vendas.produtos: Close
+[0m13:09:34.263909 [debug] [Thread-1 (]: On seed.dbt_vendas.lojas: Close
+[0m13:09:34.269056 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: COMMIT
+[0m13:09:34.276027 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1d1f5a0-a764-41ad-ad06-5fcfe3d7cf02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17f9df260>]}
+[0m13:09:34.278324 [debug] [Thread-3 (]: On seed.dbt_vendas.seed_regioes_estados: Close
+[0m13:09:34.279273 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1d1f5a0-a764-41ad-ad06-5fcfe3d7cf02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17da338c0>]}
+[0m13:09:34.287950 [info ] [Thread-2 (]: 2 of 3 OK loaded seed file dbo.produtos ........................................ [[32mINSERT 6[0m in 0.68s]
+[0m13:09:34.294359 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1d1f5a0-a764-41ad-ad06-5fcfe3d7cf02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17dac0e90>]}
+[0m13:09:34.295514 [info ] [Thread-1 (]: 1 of 3 OK loaded seed file dbo.lojas ........................................... [[32mINSERT 6[0m in 0.69s]
+[0m13:09:34.305810 [debug] [Thread-2 (]: Finished running node seed.dbt_vendas.produtos
+[0m13:09:34.311477 [info ] [Thread-3 (]: 3 of 3 OK loaded seed file dbo.seed_regioes_estados ............................ [[32mINSERT 27[0m in 0.70s]
+[0m13:09:34.316055 [debug] [Thread-1 (]: Finished running node seed.dbt_vendas.lojas
+[0m13:09:34.321623 [debug] [Thread-3 (]: Finished running node seed.dbt_vendas.seed_regioes_estados
+[0m13:09:34.328541 [debug] [MainThread]: On master: COMMIT
+[0m13:09:34.330928 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:09:34.332759 [debug] [MainThread]: Connection 'seed.dbt_vendas.lojas' was properly closed.
+[0m13:09:34.333840 [debug] [MainThread]: Connection 'seed.dbt_vendas.produtos' was properly closed.
+[0m13:09:34.336872 [debug] [MainThread]: Connection 'seed.dbt_vendas.seed_regioes_estados' was properly closed.
+[0m13:09:34.340493 [info ] [MainThread]: 
+[0m13:09:34.343998 [info ] [MainThread]: Finished running 3 seeds in 0 hours 0 minutes and 1.30 seconds (1.30s).
+[0m13:09:34.352421 [debug] [MainThread]: Command end result
+[0m13:09:34.472027 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt_vendas/target/manifest.json
+[0m13:09:34.482092 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt_vendas/target/semantic_manifest.json
+[0m13:09:34.490247 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt_vendas/target/osi_document.json
+[0m13:09:34.509863 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/project/dbt_vendas/target/run_results.json
+[0m13:09:34.511355 [info ] [MainThread]: 
+[0m13:09:34.512664 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:09:34.515000 [info ] [MainThread]: 
+[0m13:09:34.516676 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m13:09:34.519678 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 2.9242568, "process_in_blocks": "1448", "process_kernel_time": 0.42484, "process_mem_max_rss": "138140", "process_out_blocks": "0", "process_user_time": 4.157088}
+[0m13:09:34.521869 [debug] [MainThread]: Command `dbt seed` succeeded at 13:09:34.521632 after 2.93 seconds
+[0m13:09:34.522859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17e17a5a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d180c77650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d17e58f9e0>]}
+[0m13:09:34.524143 [debug] [MainThread]: Flushing usage events
+[0m13:09:35.178455 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:09:42.091139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a91234200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a95354d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a9235f7a0>]}
+
+
+============================== 13:09:42.107842 | 9c458209-3eba-43eb-8d2f-da5557092430 ==============================
+[0m13:09:42.107842 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:09:42.110463 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'target_path': 'None', 'warn_error': 'None', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'use_colors': 'True', 'debug': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'write_json': 'True', 'version_check': 'True', 'log_cache_events': 'False', 'profiles_dir': '/opt/airflow/project/dbt_vendas', 'quiet': 'False', 'use_experimental_parser': 'False', 'maximum_seed_size_mib': '1', 'cache_selected_only': 'False', 'empty': 'False', 'invocation_command': 'dbt run --project-dir /opt/airflow/project/dbt_vendas', 'log_format': 'default', 'no_print': 'None', 'log_path': '/opt/airflow/project/dbt_vendas/logs'}
+[0m13:09:42.409579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a90e20bf0>]}
+[0m13:09:42.484907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a90a982f0>]}
+[0m13:09:42.488040 [info ] [MainThread]: Registered adapter: sqlserver=1.11.1
+[0m13:09:42.590394 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:09:42.592987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a90abd220>]}
+[0m13:09:42.594528 [warn ] [MainThread]: [[33mWARNING[0m]: When True, dbt transaction hooks (begin/commit) emit real T-SQL BEGIN TRANSACTION / COMMIT TRANSACTION statements. When False (default and legacy), begin/commit are no-ops and each statement is auto-committed by the driver. This means earlier successful statements are not rolled back if a later statement fails. This behavior is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_dbt_transactions` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:09:42.595661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a90abc230>]}
+[0m13:09:42.617808 [debug] [MainThread]: checksum: 9fbbd3914bf59bb12a76029c4d7abf7374b98f9bee9444d0065c9615c32a2b1f, vars: {}, profile: dbt_vendas, target: dev, version: 1.12.5
+[0m13:09:42.961269 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:09:42.962313 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:09:42.963363 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:09:42.978203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a910fc2c0>]}
+[0m13:09:43.173678 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt_vendas/target/manifest.json
+[0m13:09:43.180238 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt_vendas/target/semantic_manifest.json
+[0m13:09:43.200032 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt_vendas/target/osi_document.json
+[0m13:09:43.227466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a9055db80>]}
+[0m13:09:43.228576 [info ] [MainThread]: Found 10 models, 3 seeds, 1 source, 556 macros
+[0m13:09:43.229656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a90ae79b0>]}
+[0m13:09:43.233775 [info ] [MainThread]: 
+[0m13:09:43.234894 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:09:43.236412 [info ] [MainThread]: 
+[0m13:09:43.238156 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m13:09:43.244914 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_VENDAS'
+[0m13:09:43.280716 [debug] [ThreadPool]: dbt-sqlserver
+[0m13:09:43.285556 [debug] [ThreadPool]: Using sqlserver connection "list_VENDAS"
+[0m13:09:43.287522 [debug] [ThreadPool]: On list_VENDAS: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "connection_name": "list_VENDAS"} */
+USE [VENDAS];
+    select  name as [schema]
+    from sys.schemas with (nolock) 
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m13:09:43.288501 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:09:43.290919 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:43.580240 [debug] [ThreadPool]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:43.585972 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:09:43.591945 [debug] [ThreadPool]: On list_VENDAS: Close
+[0m13:09:43.599494 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_VENDAS, now list_VENDAS_dbo)
+[0m13:09:43.615105 [debug] [ThreadPool]: dbt-sqlserver
+[0m13:09:43.617280 [debug] [ThreadPool]: Using sqlserver connection "list_VENDAS_dbo"
+[0m13:09:43.618479 [debug] [ThreadPool]: On list_VENDAS_dbo: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "connection_name": "list_VENDAS_dbo"} */
+USE [VENDAS];
+    declare @schema_id int = schema_id('dbo');
+    select
+      DB_NAME() as [database],
+      t.name as [name],
+      'dbo' as [schema],
+      'table' as table_type
+    from sys.tables as t with (nolock)
+    where t.schema_id = @schema_id
+    union all
+    select
+      DB_NAME() as [database],
+      v.name as [name],
+      'dbo' as [schema],
+      'view' as table_type
+    from sys.views as v with (nolock)
+    where v.schema_id = @schema_id
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m13:09:43.620144 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:09:43.621812 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:43.742767 [debug] [ThreadPool]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:43.747064 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:09:43.750181 [debug] [ThreadPool]: On list_VENDAS_dbo: ROLLBACK
+[0m13:09:43.751009 [debug] [ThreadPool]: On list_VENDAS_dbo: Close
+[0m13:09:43.755328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a934d18e0>]}
+[0m13:09:43.756452 [debug] [MainThread]: On master: COMMIT
+[0m13:09:43.762492 [debug] [Thread-1 (]: Began running node model.dbt_vendas.staging_vendas
+[0m13:09:43.764825 [info ] [Thread-1 (]: 1 of 10 START sql view model dbo.staging_vendas ................................ [RUN]
+[0m13:09:43.766251 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_VENDAS_dbo, now model.dbt_vendas.staging_vendas)
+[0m13:09:43.767022 [debug] [Thread-1 (]: Began compiling node model.dbt_vendas.staging_vendas
+[0m13:09:43.773608 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_vendas.staging_vendas"
+[0m13:09:43.781648 [debug] [Thread-1 (]: Began executing node model.dbt_vendas.staging_vendas
+[0m13:09:43.819491 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_vendas.staging_vendas"
+[0m13:09:43.821949 [debug] [Thread-1 (]: On model.dbt_vendas.staging_vendas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.staging_vendas"} */
+
+    USE [VENDAS];
+  select object_definition(object_id(quotename('dbo') + '.' + quotename('staging_vendas'), 'V')) as definition
+  where object_id(quotename('dbo') + '.' + quotename('staging_vendas'), 'V') is not null
+
+  
+[0m13:09:43.823251 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:09:43.824401 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:43.953987 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:43.962400 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:43.978013 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_vendas.staging_vendas"
+[0m13:09:43.989261 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_vendas.staging_vendas"
+[0m13:09:43.990745 [debug] [Thread-1 (]: On model.dbt_vendas.staging_vendas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.staging_vendas"} */
+declare @dbt_sqlserver_noop int;
+[0m13:09:43.995501 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:44.035253 [debug] [Thread-1 (]: On model.dbt_vendas.staging_vendas: COMMIT
+[0m13:09:44.053999 [debug] [Thread-1 (]: Applying DROP to: "VENDAS"."dbo"."staging_vendas__dbt_backup"
+[0m13:09:44.084614 [debug] [Thread-1 (]: dbt-sqlserver
+[0m13:09:44.089283 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_vendas.staging_vendas"
+[0m13:09:44.095495 [debug] [Thread-1 (]: On model.dbt_vendas.staging_vendas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.staging_vendas"} */
+
+        USE [VENDAS];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs with (nolock)
+        inner join sys.objects obj with (nolock)
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch with (nolock)
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'VENDAS'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'staging_vendas__dbt_backup'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m13:09:44.150624 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:44.156733 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_vendas.staging_vendas"
+[0m13:09:44.158617 [debug] [Thread-1 (]: On model.dbt_vendas.staging_vendas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.staging_vendas"} */
+
+      
+      
+    
+    USE [VENDAS];
+    EXEC('DROP view IF EXISTS "dbo"."staging_vendas__dbt_backup";');
+
+[0m13:09:44.162236 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:44.168501 [debug] [Thread-1 (]: On model.dbt_vendas.staging_vendas: Close
+[0m13:09:44.173474 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a936f54c0>]}
+[0m13:09:44.176752 [info ] [Thread-1 (]: 1 of 10 OK created sql view model dbo.staging_vendas ........................... [[32mOK[0m in 0.41s]
+[0m13:09:44.178585 [debug] [Thread-1 (]: Finished running node model.dbt_vendas.staging_vendas
+[0m13:09:44.180592 [debug] [Thread-3 (]: Began running node model.dbt_vendas.intermediate_vendas_enriquecidas
+[0m13:09:44.183426 [info ] [Thread-3 (]: 2 of 10 START sql view model dbo.intermediate_vendas_enriquecidas .............. [RUN]
+[0m13:09:44.186024 [debug] [Thread-3 (]: Acquiring new sqlserver connection 'model.dbt_vendas.intermediate_vendas_enriquecidas'
+[0m13:09:44.188309 [debug] [Thread-3 (]: Began compiling node model.dbt_vendas.intermediate_vendas_enriquecidas
+[0m13:09:44.195164 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_vendas.intermediate_vendas_enriquecidas"
+[0m13:09:44.206357 [debug] [Thread-3 (]: Began executing node model.dbt_vendas.intermediate_vendas_enriquecidas
+[0m13:09:44.215755 [debug] [Thread-3 (]: Using sqlserver connection "model.dbt_vendas.intermediate_vendas_enriquecidas"
+[0m13:09:44.218616 [debug] [Thread-3 (]: On model.dbt_vendas.intermediate_vendas_enriquecidas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_vendas_enriquecidas"} */
+
+    USE [VENDAS];
+  select object_definition(object_id(quotename('dbo') + '.' + quotename('intermediate_vendas_enriquecidas'), 'V')) as definition
+  where object_id(quotename('dbo') + '.' + quotename('intermediate_vendas_enriquecidas'), 'V') is not null
+
+  
+[0m13:09:44.221567 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:09:44.224427 [debug] [Thread-3 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:44.429184 [debug] [Thread-3 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:44.444279 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:44.452464 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_vendas.intermediate_vendas_enriquecidas"
+[0m13:09:44.466965 [debug] [Thread-3 (]: Using sqlserver connection "model.dbt_vendas.intermediate_vendas_enriquecidas"
+[0m13:09:44.469270 [debug] [Thread-3 (]: On model.dbt_vendas.intermediate_vendas_enriquecidas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_vendas_enriquecidas"} */
+declare @dbt_sqlserver_noop int;
+[0m13:09:44.474240 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:44.480564 [debug] [Thread-3 (]: On model.dbt_vendas.intermediate_vendas_enriquecidas: COMMIT
+[0m13:09:44.502644 [debug] [Thread-3 (]: Applying DROP to: "VENDAS"."dbo"."intermediate_vendas_enriquecidas__dbt_backup"
+[0m13:09:44.508956 [debug] [Thread-3 (]: dbt-sqlserver
+[0m13:09:44.511975 [debug] [Thread-3 (]: Using sqlserver connection "model.dbt_vendas.intermediate_vendas_enriquecidas"
+[0m13:09:44.516775 [debug] [Thread-3 (]: On model.dbt_vendas.intermediate_vendas_enriquecidas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_vendas_enriquecidas"} */
+
+        USE [VENDAS];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs with (nolock)
+        inner join sys.objects obj with (nolock)
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch with (nolock)
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'VENDAS'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'intermediate_vendas_enriquecidas__dbt_backup'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m13:09:44.561108 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:44.571136 [debug] [Thread-3 (]: Using sqlserver connection "model.dbt_vendas.intermediate_vendas_enriquecidas"
+[0m13:09:44.574545 [debug] [Thread-3 (]: On model.dbt_vendas.intermediate_vendas_enriquecidas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_vendas_enriquecidas"} */
+
+      
+      
+    
+    USE [VENDAS];
+    EXEC('DROP view IF EXISTS "dbo"."intermediate_vendas_enriquecidas__dbt_backup";');
+
+[0m13:09:44.582272 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:44.588639 [debug] [Thread-3 (]: On model.dbt_vendas.intermediate_vendas_enriquecidas: Close
+[0m13:09:44.591872 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a90a98fe0>]}
+[0m13:09:44.595345 [info ] [Thread-3 (]: 2 of 10 OK created sql view model dbo.intermediate_vendas_enriquecidas ......... [[32mOK[0m in 0.41s]
+[0m13:09:44.598495 [debug] [Thread-3 (]: Finished running node model.dbt_vendas.intermediate_vendas_enriquecidas
+[0m13:09:44.601923 [debug] [Thread-2 (]: Began running node model.dbt_vendas.intermediate_datas
+[0m13:09:44.602953 [debug] [Thread-1 (]: Began running node model.dbt_vendas.intermediate_estados
+[0m13:09:44.603888 [debug] [Thread-4 (]: Began running node model.dbt_vendas.intermediate_faturamento
+[0m13:09:44.604553 [debug] [Thread-3 (]: Began running node model.dbt_vendas.marts_faturamento_forma_pgto
+[0m13:09:44.605294 [info ] [Thread-2 (]: 3 of 10 START sql view model dbo.intermediate_datas ............................ [RUN]
+[0m13:09:44.606687 [info ] [Thread-1 (]: 4 of 10 START sql view model dbo.intermediate_estados .......................... [RUN]
+[0m13:09:44.609029 [info ] [Thread-4 (]: 5 of 10 START sql view model dbo.intermediate_faturamento ...................... [RUN]
+[0m13:09:44.611963 [info ] [Thread-3 (]: 6 of 10 START sql view model dbo.marts_faturamento_forma_pgto .................. [RUN]
+[0m13:09:44.614402 [debug] [Thread-2 (]: Acquiring new sqlserver connection 'model.dbt_vendas.intermediate_datas'
+[0m13:09:44.617025 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_vendas.staging_vendas, now model.dbt_vendas.intermediate_estados)
+[0m13:09:44.619508 [debug] [Thread-4 (]: Acquiring new sqlserver connection 'model.dbt_vendas.intermediate_faturamento'
+[0m13:09:44.622020 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_vendas.intermediate_vendas_enriquecidas, now model.dbt_vendas.marts_faturamento_forma_pgto)
+[0m13:09:44.623364 [debug] [Thread-2 (]: Began compiling node model.dbt_vendas.intermediate_datas
+[0m13:09:44.625095 [debug] [Thread-1 (]: Began compiling node model.dbt_vendas.intermediate_estados
+[0m13:09:44.627716 [debug] [Thread-4 (]: Began compiling node model.dbt_vendas.intermediate_faturamento
+[0m13:09:44.629003 [debug] [Thread-3 (]: Began compiling node model.dbt_vendas.marts_faturamento_forma_pgto
+[0m13:09:44.634770 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_vendas.intermediate_datas"
+[0m13:09:44.641581 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_vendas.intermediate_estados"
+[0m13:09:44.648567 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_vendas.intermediate_faturamento"
+[0m13:09:44.652730 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_vendas.marts_faturamento_forma_pgto"
+[0m13:09:44.660201 [debug] [Thread-4 (]: Began executing node model.dbt_vendas.intermediate_faturamento
+[0m13:09:44.661767 [debug] [Thread-1 (]: Began executing node model.dbt_vendas.intermediate_estados
+[0m13:09:44.667819 [debug] [Thread-2 (]: Began executing node model.dbt_vendas.intermediate_datas
+[0m13:09:44.671661 [debug] [Thread-4 (]: Using sqlserver connection "model.dbt_vendas.intermediate_faturamento"
+[0m13:09:44.678502 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_vendas.intermediate_estados"
+[0m13:09:44.679137 [debug] [Thread-3 (]: Began executing node model.dbt_vendas.marts_faturamento_forma_pgto
+[0m13:09:44.689782 [debug] [Thread-2 (]: Using sqlserver connection "model.dbt_vendas.intermediate_datas"
+[0m13:09:44.691437 [debug] [Thread-4 (]: On model.dbt_vendas.intermediate_faturamento: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_faturamento"} */
+
+    USE [VENDAS];
+  select object_definition(object_id(quotename('dbo') + '.' + quotename('intermediate_faturamento'), 'V')) as definition
+  where object_id(quotename('dbo') + '.' + quotename('intermediate_faturamento'), 'V') is not null
+
+  
+[0m13:09:44.693702 [debug] [Thread-1 (]: On model.dbt_vendas.intermediate_estados: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_estados"} */
+
+    USE [VENDAS];
+  select object_definition(object_id(quotename('dbo') + '.' + quotename('intermediate_estados'), 'V')) as definition
+  where object_id(quotename('dbo') + '.' + quotename('intermediate_estados'), 'V') is not null
+
+  
+[0m13:09:44.699411 [debug] [Thread-3 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_forma_pgto"
+[0m13:09:44.700744 [debug] [Thread-2 (]: On model.dbt_vendas.intermediate_datas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_datas"} */
+
+    USE [VENDAS];
+  select object_definition(object_id(quotename('dbo') + '.' + quotename('intermediate_datas'), 'V')) as definition
+  where object_id(quotename('dbo') + '.' + quotename('intermediate_datas'), 'V') is not null
+
+  
+[0m13:09:44.701740 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:09:44.703697 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:09:44.705766 [debug] [Thread-3 (]: On model.dbt_vendas.marts_faturamento_forma_pgto: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_forma_pgto"} */
+
+    USE [VENDAS];
+  select object_definition(object_id(quotename('dbo') + '.' + quotename('marts_faturamento_forma_pgto'), 'V')) as definition
+  where object_id(quotename('dbo') + '.' + quotename('marts_faturamento_forma_pgto'), 'V') is not null
+
+  
+[0m13:09:44.706815 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:09:44.708307 [debug] [Thread-4 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:44.710666 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:44.711763 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:09:44.712715 [debug] [Thread-2 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:44.716431 [debug] [Thread-3 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:44.884672 [debug] [Thread-4 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:44.889721 [debug] [Thread-3 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:44.891594 [debug] [Thread-2 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:44.893167 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:44.894691 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.040175 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_vendas.intermediate_faturamento"
+[0m13:09:45.041246 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.042283 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.046823 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_vendas.marts_faturamento_forma_pgto"
+[0m13:09:45.047976 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.051330 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_vendas.intermediate_datas"
+[0m13:09:45.056145 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_vendas.intermediate_estados"
+[0m13:09:45.056860 [debug] [Thread-4 (]: Using sqlserver connection "model.dbt_vendas.intermediate_faturamento"
+[0m13:09:45.058954 [debug] [Thread-4 (]: On model.dbt_vendas.intermediate_faturamento: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_faturamento"} */
+declare @dbt_sqlserver_noop int;
+[0m13:09:45.061083 [debug] [Thread-3 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_forma_pgto"
+[0m13:09:45.063055 [debug] [Thread-2 (]: Using sqlserver connection "model.dbt_vendas.intermediate_datas"
+[0m13:09:45.064345 [debug] [Thread-3 (]: On model.dbt_vendas.marts_faturamento_forma_pgto: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_forma_pgto"} */
+declare @dbt_sqlserver_noop int;
+[0m13:09:45.065808 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.066881 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_vendas.intermediate_estados"
+[0m13:09:45.067469 [debug] [Thread-2 (]: On model.dbt_vendas.intermediate_datas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_datas"} */
+declare @dbt_sqlserver_noop int;
+[0m13:09:45.072783 [debug] [Thread-4 (]: On model.dbt_vendas.intermediate_faturamento: COMMIT
+[0m13:09:45.073511 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.074063 [debug] [Thread-1 (]: On model.dbt_vendas.intermediate_estados: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_estados"} */
+declare @dbt_sqlserver_noop int;
+[0m13:09:45.079339 [debug] [Thread-4 (]: Applying DROP to: "VENDAS"."dbo"."intermediate_faturamento__dbt_backup"
+[0m13:09:45.080436 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.084357 [debug] [Thread-3 (]: On model.dbt_vendas.marts_faturamento_forma_pgto: COMMIT
+[0m13:09:45.089871 [debug] [Thread-4 (]: dbt-sqlserver
+[0m13:09:45.090506 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.094955 [debug] [Thread-2 (]: On model.dbt_vendas.intermediate_datas: COMMIT
+[0m13:09:45.098840 [debug] [Thread-3 (]: Applying DROP to: "VENDAS"."dbo"."marts_faturamento_forma_pgto__dbt_backup"
+[0m13:09:45.101710 [debug] [Thread-4 (]: Using sqlserver connection "model.dbt_vendas.intermediate_faturamento"
+[0m13:09:45.110979 [debug] [Thread-1 (]: On model.dbt_vendas.intermediate_estados: COMMIT
+[0m13:09:45.116470 [debug] [Thread-2 (]: Applying DROP to: "VENDAS"."dbo"."intermediate_datas__dbt_backup"
+[0m13:09:45.121702 [debug] [Thread-3 (]: dbt-sqlserver
+[0m13:09:45.123716 [debug] [Thread-4 (]: On model.dbt_vendas.intermediate_faturamento: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_faturamento"} */
+
+        USE [VENDAS];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs with (nolock)
+        inner join sys.objects obj with (nolock)
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch with (nolock)
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'VENDAS'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'intermediate_faturamento__dbt_backup'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m13:09:45.131057 [debug] [Thread-1 (]: Applying DROP to: "VENDAS"."dbo"."intermediate_estados__dbt_backup"
+[0m13:09:45.136154 [debug] [Thread-2 (]: dbt-sqlserver
+[0m13:09:45.140242 [debug] [Thread-3 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_forma_pgto"
+[0m13:09:45.148494 [debug] [Thread-1 (]: dbt-sqlserver
+[0m13:09:45.152096 [debug] [Thread-2 (]: Using sqlserver connection "model.dbt_vendas.intermediate_datas"
+[0m13:09:45.156617 [debug] [Thread-3 (]: On model.dbt_vendas.marts_faturamento_forma_pgto: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_forma_pgto"} */
+
+        USE [VENDAS];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs with (nolock)
+        inner join sys.objects obj with (nolock)
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch with (nolock)
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'VENDAS'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'marts_faturamento_forma_pgto__dbt_backup'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m13:09:45.162011 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_vendas.intermediate_estados"
+[0m13:09:45.166664 [debug] [Thread-2 (]: On model.dbt_vendas.intermediate_datas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_datas"} */
+
+        USE [VENDAS];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs with (nolock)
+        inner join sys.objects obj with (nolock)
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch with (nolock)
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'VENDAS'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'intermediate_datas__dbt_backup'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m13:09:45.172516 [debug] [Thread-1 (]: On model.dbt_vendas.intermediate_estados: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_estados"} */
+
+        USE [VENDAS];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs with (nolock)
+        inner join sys.objects obj with (nolock)
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch with (nolock)
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'VENDAS'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'intermediate_estados__dbt_backup'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m13:09:45.177006 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.185588 [debug] [Thread-4 (]: Using sqlserver connection "model.dbt_vendas.intermediate_faturamento"
+[0m13:09:45.188267 [debug] [Thread-4 (]: On model.dbt_vendas.intermediate_faturamento: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_faturamento"} */
+
+      
+      
+    
+    USE [VENDAS];
+    EXEC('DROP view IF EXISTS "dbo"."intermediate_faturamento__dbt_backup";');
+
+[0m13:09:45.191568 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.196169 [debug] [Thread-4 (]: On model.dbt_vendas.intermediate_faturamento: Close
+[0m13:09:45.200154 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a905c6c00>]}
+[0m13:09:45.202486 [info ] [Thread-4 (]: 5 of 10 OK created sql view model dbo.intermediate_faturamento ................. [[32mOK[0m in 0.58s]
+[0m13:09:45.205749 [debug] [Thread-4 (]: Finished running node model.dbt_vendas.intermediate_faturamento
+[0m13:09:45.207106 [debug] [Thread-4 (]: Began running node model.dbt_vendas.marts_faturamento_produto
+[0m13:09:45.210209 [info ] [Thread-4 (]: 7 of 10 START sql view model dbo.marts_faturamento_produto ..................... [RUN]
+[0m13:09:45.212321 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.dbt_vendas.intermediate_faturamento, now model.dbt_vendas.marts_faturamento_produto)
+[0m13:09:45.213323 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.216643 [debug] [Thread-4 (]: Began compiling node model.dbt_vendas.marts_faturamento_produto
+[0m13:09:45.223769 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_vendas.marts_faturamento_produto"
+[0m13:09:45.226212 [debug] [Thread-2 (]: Using sqlserver connection "model.dbt_vendas.intermediate_datas"
+[0m13:09:45.227716 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.230934 [debug] [Thread-2 (]: On model.dbt_vendas.intermediate_datas: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_datas"} */
+
+      
+      
+    
+    USE [VENDAS];
+    EXEC('DROP view IF EXISTS "dbo"."intermediate_datas__dbt_backup";');
+
+[0m13:09:45.235937 [debug] [Thread-3 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_forma_pgto"
+[0m13:09:45.237837 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.240985 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.242233 [debug] [Thread-3 (]: On model.dbt_vendas.marts_faturamento_forma_pgto: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_forma_pgto"} */
+
+      
+      
+    
+    USE [VENDAS];
+    EXEC('DROP view IF EXISTS "dbo"."marts_faturamento_forma_pgto__dbt_backup";');
+
+[0m13:09:45.246469 [debug] [Thread-4 (]: Began executing node model.dbt_vendas.marts_faturamento_produto
+[0m13:09:45.249486 [debug] [Thread-2 (]: On model.dbt_vendas.intermediate_datas: Close
+[0m13:09:45.250852 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_vendas.intermediate_estados"
+[0m13:09:45.260125 [debug] [Thread-4 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_produto"
+[0m13:09:45.261073 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.262321 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a90642720>]}
+[0m13:09:45.262916 [debug] [Thread-1 (]: On model.dbt_vendas.intermediate_estados: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.intermediate_estados"} */
+
+      
+      
+    
+    USE [VENDAS];
+    EXEC('DROP view IF EXISTS "dbo"."intermediate_estados__dbt_backup";');
+
+[0m13:09:45.265094 [debug] [Thread-4 (]: On model.dbt_vendas.marts_faturamento_produto: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_produto"} */
+
+    USE [VENDAS];
+  select object_definition(object_id(quotename('dbo') + '.' + quotename('marts_faturamento_produto'), 'V')) as definition
+  where object_id(quotename('dbo') + '.' + quotename('marts_faturamento_produto'), 'V') is not null
+
+  
+[0m13:09:45.267990 [debug] [Thread-3 (]: On model.dbt_vendas.marts_faturamento_forma_pgto: Close
+[0m13:09:45.269114 [info ] [Thread-2 (]: 3 of 10 OK created sql view model dbo.intermediate_datas ....................... [[32mOK[0m in 0.65s]
+[0m13:09:45.271837 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:09:45.272939 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.273925 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a90611220>]}
+[0m13:09:45.275656 [debug] [Thread-2 (]: Finished running node model.dbt_vendas.intermediate_datas
+[0m13:09:45.277709 [debug] [Thread-4 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:45.279920 [debug] [Thread-1 (]: On model.dbt_vendas.intermediate_estados: Close
+[0m13:09:45.282299 [info ] [Thread-3 (]: 6 of 10 OK created sql view model dbo.marts_faturamento_forma_pgto ............. [[32mOK[0m in 0.65s]
+[0m13:09:45.283515 [debug] [Thread-2 (]: Began running node model.dbt_vendas.marts_faturamento_regiao
+[0m13:09:45.285577 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a90640ec0>]}
+[0m13:09:45.287150 [debug] [Thread-3 (]: Finished running node model.dbt_vendas.marts_faturamento_forma_pgto
+[0m13:09:45.289246 [info ] [Thread-2 (]: 8 of 10 START sql view model dbo.marts_faturamento_regiao ...................... [RUN]
+[0m13:09:45.291178 [info ] [Thread-1 (]: 4 of 10 OK created sql view model dbo.intermediate_estados ..................... [[32mOK[0m in 0.67s]
+[0m13:09:45.294040 [debug] [Thread-3 (]: Began running node model.dbt_vendas.marts_vendas_vendedor
+[0m13:09:45.295503 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_vendas.intermediate_datas, now model.dbt_vendas.marts_faturamento_regiao)
+[0m13:09:45.297106 [debug] [Thread-1 (]: Finished running node model.dbt_vendas.intermediate_estados
+[0m13:09:45.299485 [info ] [Thread-3 (]: 9 of 10 START sql view model dbo.marts_vendas_vendedor ......................... [RUN]
+[0m13:09:45.300812 [debug] [Thread-2 (]: Began compiling node model.dbt_vendas.marts_faturamento_regiao
+[0m13:09:45.302445 [debug] [Thread-1 (]: Began running node model.dbt_vendas.marts_faturamento_mensal
+[0m13:09:45.304688 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_vendas.marts_faturamento_forma_pgto, now model.dbt_vendas.marts_vendas_vendedor)
+[0m13:09:45.308082 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_vendas.marts_faturamento_regiao"
+[0m13:09:45.310661 [info ] [Thread-1 (]: 10 of 10 START sql view model dbo.marts_faturamento_mensal ..................... [RUN]
+[0m13:09:45.311814 [debug] [Thread-3 (]: Began compiling node model.dbt_vendas.marts_vendas_vendedor
+[0m13:09:45.313585 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_vendas.intermediate_estados, now model.dbt_vendas.marts_faturamento_mensal)
+[0m13:09:45.317504 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_vendas.marts_vendas_vendedor"
+[0m13:09:45.318881 [debug] [Thread-1 (]: Began compiling node model.dbt_vendas.marts_faturamento_mensal
+[0m13:09:45.323233 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_vendas.marts_faturamento_mensal"
+[0m13:09:45.326191 [debug] [Thread-2 (]: Began executing node model.dbt_vendas.marts_faturamento_regiao
+[0m13:09:45.327500 [debug] [Thread-3 (]: Began executing node model.dbt_vendas.marts_vendas_vendedor
+[0m13:09:45.332849 [debug] [Thread-2 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_regiao"
+[0m13:09:45.338135 [debug] [Thread-3 (]: Using sqlserver connection "model.dbt_vendas.marts_vendas_vendedor"
+[0m13:09:45.338812 [debug] [Thread-1 (]: Began executing node model.dbt_vendas.marts_faturamento_mensal
+[0m13:09:45.339301 [debug] [Thread-2 (]: On model.dbt_vendas.marts_faturamento_regiao: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_regiao"} */
+
+    USE [VENDAS];
+  select object_definition(object_id(quotename('dbo') + '.' + quotename('marts_faturamento_regiao'), 'V')) as definition
+  where object_id(quotename('dbo') + '.' + quotename('marts_faturamento_regiao'), 'V') is not null
+
+  
+[0m13:09:45.340228 [debug] [Thread-3 (]: On model.dbt_vendas.marts_vendas_vendedor: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_vendas_vendedor"} */
+
+    USE [VENDAS];
+  select object_definition(object_id(quotename('dbo') + '.' + quotename('marts_vendas_vendedor'), 'V')) as definition
+  where object_id(quotename('dbo') + '.' + quotename('marts_vendas_vendedor'), 'V') is not null
+
+  
+[0m13:09:45.344929 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_mensal"
+[0m13:09:45.345945 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:09:45.347132 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:09:45.348155 [debug] [Thread-1 (]: On model.dbt_vendas.marts_faturamento_mensal: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_mensal"} */
+
+    USE [VENDAS];
+  select object_definition(object_id(quotename('dbo') + '.' + quotename('marts_faturamento_mensal'), 'V')) as definition
+  where object_id(quotename('dbo') + '.' + quotename('marts_faturamento_mensal'), 'V') is not null
+
+  
+[0m13:09:45.349217 [debug] [Thread-2 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:45.350099 [debug] [Thread-3 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:45.350818 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:09:45.352969 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal,1433;Database=VENDAS;UID=***;PWD=***;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.11.1;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:09:45.434725 [debug] [Thread-4 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:45.442542 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.446764 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_vendas.marts_faturamento_produto"
+[0m13:09:45.456794 [debug] [Thread-4 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_produto"
+[0m13:09:45.458744 [debug] [Thread-4 (]: On model.dbt_vendas.marts_faturamento_produto: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_produto"} */
+declare @dbt_sqlserver_noop int;
+[0m13:09:45.462231 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.467208 [debug] [Thread-4 (]: On model.dbt_vendas.marts_faturamento_produto: COMMIT
+[0m13:09:45.472630 [debug] [Thread-4 (]: Applying DROP to: "VENDAS"."dbo"."marts_faturamento_produto__dbt_backup"
+[0m13:09:45.478404 [debug] [Thread-4 (]: dbt-sqlserver
+[0m13:09:45.484412 [debug] [Thread-4 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_produto"
+[0m13:09:45.489074 [debug] [Thread-4 (]: On model.dbt_vendas.marts_faturamento_produto: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_produto"} */
+
+        USE [VENDAS];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs with (nolock)
+        inner join sys.objects obj with (nolock)
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch with (nolock)
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'VENDAS'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'marts_faturamento_produto__dbt_backup'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m13:09:45.512492 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:45.515996 [debug] [Thread-2 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:45.521585 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.522819 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.526810 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_vendas.marts_faturamento_mensal"
+[0m13:09:45.528299 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.532017 [debug] [Thread-3 (]: sqlserver adapter: Connected to db: VENDAS
+[0m13:09:45.534600 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_vendas.marts_faturamento_regiao"
+[0m13:09:45.538676 [debug] [Thread-4 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_produto"
+[0m13:09:45.540528 [debug] [Thread-4 (]: On model.dbt_vendas.marts_faturamento_produto: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_produto"} */
+
+      
+      
+    
+    USE [VENDAS];
+    EXEC('DROP view IF EXISTS "dbo"."marts_faturamento_produto__dbt_backup";');
+
+[0m13:09:45.541934 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_mensal"
+[0m13:09:45.543721 [debug] [Thread-1 (]: On model.dbt_vendas.marts_faturamento_mensal: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_mensal"} */
+declare @dbt_sqlserver_noop int;
+[0m13:09:45.544703 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.545576 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.546357 [debug] [Thread-2 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_regiao"
+[0m13:09:45.548613 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.551256 [debug] [Thread-4 (]: On model.dbt_vendas.marts_faturamento_produto: Close
+[0m13:09:45.553113 [debug] [Thread-2 (]: On model.dbt_vendas.marts_faturamento_regiao: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_regiao"} */
+declare @dbt_sqlserver_noop int;
+[0m13:09:45.554495 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_vendas.marts_vendas_vendedor"
+[0m13:09:45.558191 [debug] [Thread-1 (]: On model.dbt_vendas.marts_faturamento_mensal: COMMIT
+[0m13:09:45.559983 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a91057800>]}
+[0m13:09:45.561863 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.564587 [debug] [Thread-1 (]: Applying DROP to: "VENDAS"."dbo"."marts_faturamento_mensal__dbt_backup"
+[0m13:09:45.566481 [info ] [Thread-4 (]: 7 of 10 OK created sql view model dbo.marts_faturamento_produto ................ [[32mOK[0m in 0.35s]
+[0m13:09:45.570221 [debug] [Thread-2 (]: On model.dbt_vendas.marts_faturamento_regiao: COMMIT
+[0m13:09:45.574873 [debug] [Thread-1 (]: dbt-sqlserver
+[0m13:09:45.577092 [debug] [Thread-4 (]: Finished running node model.dbt_vendas.marts_faturamento_produto
+[0m13:09:45.577844 [debug] [Thread-3 (]: Using sqlserver connection "model.dbt_vendas.marts_vendas_vendedor"
+[0m13:09:45.579837 [debug] [Thread-2 (]: Applying DROP to: "VENDAS"."dbo"."marts_faturamento_regiao__dbt_backup"
+[0m13:09:45.582315 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_mensal"
+[0m13:09:45.587026 [debug] [Thread-3 (]: On model.dbt_vendas.marts_vendas_vendedor: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_vendas_vendedor"} */
+declare @dbt_sqlserver_noop int;
+[0m13:09:45.590890 [debug] [Thread-2 (]: dbt-sqlserver
+[0m13:09:45.592972 [debug] [Thread-1 (]: On model.dbt_vendas.marts_faturamento_mensal: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_mensal"} */
+
+        USE [VENDAS];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs with (nolock)
+        inner join sys.objects obj with (nolock)
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch with (nolock)
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'VENDAS'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'marts_faturamento_mensal__dbt_backup'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m13:09:45.598582 [debug] [Thread-2 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_regiao"
+[0m13:09:45.601156 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.603036 [debug] [Thread-2 (]: On model.dbt_vendas.marts_faturamento_regiao: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_regiao"} */
+
+        USE [VENDAS];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs with (nolock)
+        inner join sys.objects obj with (nolock)
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch with (nolock)
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'VENDAS'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'marts_faturamento_regiao__dbt_backup'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m13:09:45.609961 [debug] [Thread-3 (]: On model.dbt_vendas.marts_vendas_vendedor: COMMIT
+[0m13:09:45.613528 [debug] [Thread-3 (]: Applying DROP to: "VENDAS"."dbo"."marts_vendas_vendedor__dbt_backup"
+[0m13:09:45.617034 [debug] [Thread-3 (]: dbt-sqlserver
+[0m13:09:45.618989 [debug] [Thread-3 (]: Using sqlserver connection "model.dbt_vendas.marts_vendas_vendedor"
+[0m13:09:45.622265 [debug] [Thread-3 (]: On model.dbt_vendas.marts_vendas_vendedor: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_vendas_vendedor"} */
+
+        USE [VENDAS];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs with (nolock)
+        inner join sys.objects obj with (nolock)
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch with (nolock)
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'VENDAS'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'marts_vendas_vendedor__dbt_backup'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m13:09:45.625039 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.631201 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_mensal"
+[0m13:09:45.633114 [debug] [Thread-1 (]: On model.dbt_vendas.marts_faturamento_mensal: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_mensal"} */
+
+      
+      
+    
+    USE [VENDAS];
+    EXEC('DROP view IF EXISTS "dbo"."marts_faturamento_mensal__dbt_backup";');
+
+[0m13:09:45.633857 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.639276 [debug] [Thread-2 (]: Using sqlserver connection "model.dbt_vendas.marts_faturamento_regiao"
+[0m13:09:45.639925 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.640478 [debug] [Thread-2 (]: On model.dbt_vendas.marts_faturamento_regiao: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_faturamento_regiao"} */
+
+      
+      
+    
+    USE [VENDAS];
+    EXEC('DROP view IF EXISTS "dbo"."marts_faturamento_regiao__dbt_backup";');
+
+[0m13:09:45.643597 [debug] [Thread-1 (]: On model.dbt_vendas.marts_faturamento_mensal: Close
+[0m13:09:45.644977 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a941f1280>]}
+[0m13:09:45.645599 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.646409 [info ] [Thread-1 (]: 10 of 10 OK created sql view model dbo.marts_faturamento_mensal ................ [[32mOK[0m in 0.33s]
+[0m13:09:45.647397 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.651338 [debug] [Thread-2 (]: On model.dbt_vendas.marts_faturamento_regiao: Close
+[0m13:09:45.651986 [debug] [Thread-1 (]: Finished running node model.dbt_vendas.marts_faturamento_mensal
+[0m13:09:45.655010 [debug] [Thread-3 (]: Using sqlserver connection "model.dbt_vendas.marts_vendas_vendedor"
+[0m13:09:45.655725 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a90bcc7d0>]}
+[0m13:09:45.656624 [debug] [Thread-3 (]: On model.dbt_vendas.marts_vendas_vendedor: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "dbt_vendas", "target_name": "dev", "node_id": "model.dbt_vendas.marts_vendas_vendedor"} */
+
+      
+      
+    
+    USE [VENDAS];
+    EXEC('DROP view IF EXISTS "dbo"."marts_vendas_vendedor__dbt_backup";');
+
+[0m13:09:45.657907 [info ] [Thread-2 (]: 8 of 10 OK created sql view model dbo.marts_faturamento_regiao ................. [[32mOK[0m in 0.36s]
+[0m13:09:45.659978 [debug] [Thread-2 (]: Finished running node model.dbt_vendas.marts_faturamento_regiao
+[0m13:09:45.660778 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m13:09:45.662992 [debug] [Thread-3 (]: On model.dbt_vendas.marts_vendas_vendedor: Close
+[0m13:09:45.665142 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c458209-3eba-43eb-8d2f-da5557092430', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a91056bd0>]}
+[0m13:09:45.666695 [info ] [Thread-3 (]: 9 of 10 OK created sql view model dbo.marts_vendas_vendedor .................... [[32mOK[0m in 0.36s]
+[0m13:09:45.667743 [debug] [Thread-3 (]: Finished running node model.dbt_vendas.marts_vendas_vendedor
+[0m13:09:45.670745 [debug] [MainThread]: On master: COMMIT
+[0m13:09:45.671758 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:09:45.672447 [debug] [MainThread]: Connection 'model.dbt_vendas.marts_faturamento_mensal' was properly closed.
+[0m13:09:45.673028 [debug] [MainThread]: Connection 'model.dbt_vendas.marts_vendas_vendedor' was properly closed.
+[0m13:09:45.673672 [debug] [MainThread]: Connection 'model.dbt_vendas.marts_faturamento_regiao' was properly closed.
+[0m13:09:45.674520 [debug] [MainThread]: Connection 'model.dbt_vendas.marts_faturamento_produto' was properly closed.
+[0m13:09:45.675904 [info ] [MainThread]: 
+[0m13:09:45.676896 [info ] [MainThread]: Finished running 10 view models in 0 hours 0 minutes and 2.44 seconds (2.44s).
+[0m13:09:45.680145 [debug] [MainThread]: Command end result
+[0m13:09:45.766327 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt_vendas/target/manifest.json
+[0m13:09:45.772016 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt_vendas/target/semantic_manifest.json
+[0m13:09:45.777767 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt_vendas/target/osi_document.json
+[0m13:09:45.789806 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/project/dbt_vendas/target/run_results.json
+[0m13:09:45.790750 [info ] [MainThread]: 
+[0m13:09:45.792261 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:09:45.793253 [info ] [MainThread]: 
+[0m13:09:45.794087 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=10
+[0m13:09:45.795612 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.8210242, "process_in_blocks": "1445", "process_kernel_time": 0.595732, "process_mem_max_rss": "138972", "process_out_blocks": "0", "process_user_time": 4.488675}
+[0m13:09:45.796605 [debug] [MainThread]: Command `dbt run` succeeded at 13:09:45.796445 after 3.82 seconds
+[0m13:09:45.797822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a9153e0f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a91c60410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701a90c81b80>]}
+[0m13:09:45.798859 [debug] [MainThread]: Flushing usage events
+[0m13:09:46.467127 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:09:54.433934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76662e624e00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76662d88cf80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76662d4d32c0>]}
+
+
+============================== 13:09:54.442863 | ad14bad3-7350-4e76-9784-62e157dd7b5b ==============================
+[0m13:09:54.442863 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:09:54.443979 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'introspect': 'True', 'debug': 'False', 'partial_parse': 'True', 'profiles_dir': '/opt/airflow/project/dbt_vendas', 'static_parser': 'True', 'log_cache_events': 'False', 'empty': 'None', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'maximum_seed_size_mib': '1', 'use_colors': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'fail_fast': 'False', 'no_print': 'None', 'log_format': 'default', 'printer_width': '80', 'hints_enabled': 'True', 'log_path': '/opt/airflow/project/dbt_vendas/logs', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'invocation_command': 'dbt test --project-dir /opt/airflow/project/dbt_vendas'}
+[0m13:09:54.697962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ad14bad3-7350-4e76-9784-62e157dd7b5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76662c8d3320>]}
+[0m13:09:54.770085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ad14bad3-7350-4e76-9784-62e157dd7b5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76662ca31df0>]}
+[0m13:09:54.771526 [info ] [MainThread]: Registered adapter: sqlserver=1.11.1
+[0m13:09:54.877493 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:09:54.879144 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'ad14bad3-7350-4e76-9784-62e157dd7b5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76662ca33740>]}
+[0m13:09:54.881387 [warn ] [MainThread]: [[33mWARNING[0m]: When True, dbt transaction hooks (begin/commit) emit real T-SQL BEGIN TRANSACTION / COMMIT TRANSACTION statements. When False (default and legacy), begin/commit are no-ops and each statement is auto-committed by the driver. This means earlier successful statements are not rolled back if a later statement fails. This behavior is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_dbt_transactions` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:09:54.882668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'ad14bad3-7350-4e76-9784-62e157dd7b5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76662ca33740>]}
+[0m13:09:54.899337 [debug] [MainThread]: checksum: 9fbbd3914bf59bb12a76029c4d7abf7374b98f9bee9444d0065c9615c32a2b1f, vars: {}, profile: dbt_vendas, target: dev, version: 1.12.5
+[0m13:09:55.372936 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:09:55.375557 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:09:55.377724 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:09:55.399448 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ad14bad3-7350-4e76-9784-62e157dd7b5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76662c2ab740>]}
+[0m13:09:55.677180 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt_vendas/target/manifest.json
+[0m13:09:55.683088 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt_vendas/target/semantic_manifest.json
+[0m13:09:55.700697 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt_vendas/target/osi_document.json
+[0m13:09:55.764424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ad14bad3-7350-4e76-9784-62e157dd7b5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76662bdcc080>]}
+[0m13:09:55.768276 [info ] [MainThread]: Found 10 models, 3 seeds, 1 source, 556 macros
+[0m13:09:55.769863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ad14bad3-7350-4e76-9784-62e157dd7b5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76662c2d7200>]}
+[0m13:09:55.773629 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m13:09:55.777494 [debug] [MainThread]: Command end result
+[0m13:09:55.883121 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt_vendas/target/manifest.json
+[0m13:09:55.889946 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt_vendas/target/semantic_manifest.json
+[0m13:09:55.897126 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt_vendas/target/osi_document.json
+[0m13:09:55.905336 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/project/dbt_vendas/target/run_results.json
+[0m13:09:55.908014 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.6121509, "process_in_blocks": "2565", "process_kernel_time": 0.414446, "process_mem_max_rss": "131540", "process_out_blocks": "0", "process_user_time": 3.717587}
+[0m13:09:55.910022 [debug] [MainThread]: Command `dbt test` succeeded at 13:09:55.909768 after 1.61 seconds
+[0m13:09:55.910995 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x766630f9f2f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76662bf12a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76662cacc4a0>]}
+[0m13:09:55.912054 [debug] [MainThread]: Flushing usage events
+[0m13:09:56.472952 [debug] [MainThread]: An error was encountered while trying to flush usage events

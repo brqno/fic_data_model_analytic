@@ -1,6 +1,7 @@
 from extract.fic_data import extract_fic_data
 from load.to_sql import load_to_sql
 
+# main feito para teste, podendo ser feita a extração e carregamento de dados a partir daqui, sem utilizar o Airflow
 
 def main() -> None:
     print("Iniciando extração dos dados...")

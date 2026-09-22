@@ -14,6 +14,8 @@ def load_to_sql(csv_path: str | Path | None = None) -> None:
     server = os.getenv("DB_SERVER")
     database = os.getenv("DB_DATABASE")
     driver = os.getenv("DB_DRIVER")
+    encrypt = os.getenv("DB_ENCRYPT", "no")
+    trust_server_certificate = os.getenv("DB_TRUST_SERVER_CERTIFICATE", "yes")
 
     if not all([server, database, driver]):
         raise ValueError("Variáveis DB_SERVER, DB_DATABASE e DB_DRIVER não foram configuradas no arquivo .env")
@@ -35,6 +37,8 @@ def load_to_sql(csv_path: str | Path | None = None) -> None:
         f"DRIVER={driver};"
         f"SERVER={server};"
         f"DATABASE={database};"
+        f"Encrypt={encrypt};"
+        f"TrustServerCertificate={trust_server_certificate};"
         f"{authentication}"
     )
 
