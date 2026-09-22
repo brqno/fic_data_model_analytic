@@ -1,4 +1,5 @@
 # Projeto de Engenharia de Dados
+<img width="1920" height="1040" alt="pipeline_vendas - Grid - Airflow - Google Chrome 22_09_2026 10_16_02" src="https://github.com/user-attachments/assets/4c8e5826-c428-4c6b-ba79-09981afb71c0" />
 
 Pipeline de vendas com geração de dados sintéticos, carga no SQL Server, transformação analítica com dbt e orquestração com Apache Airflow.
 
